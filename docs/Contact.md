@@ -1,0 +1,47 @@
+# Connectwise::Contact
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**first_name** | **String** |  | 
+**last_name** | **String** |  | [optional] 
+**type** | [**ContactTypeReference**](ContactTypeReference.md) |  | [optional] 
+**company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
+**site** | [**SiteReference**](SiteReference.md) |  | [optional] 
+**address_line1** | **String** |  | [optional] 
+**address_line2** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
+**state** | **String** |  | [optional] 
+**zip** | **String** |  | [optional] 
+**country** | **String** |  | [optional] 
+**relationship** | [**RelationshipReference**](RelationshipReference.md) |  | [optional] 
+**department** | [**ContactDepartmentReference**](ContactDepartmentReference.md) |  | [optional] 
+**inactive_flag** | **BOOLEAN** |  | [optional] 
+**default_merge_contact_id** | **Integer** |  | [optional] 
+**security_identifier** | **String** |  | [optional] 
+**manager_contact_id** | **Integer** |  | [optional] 
+**assistant_contact_id** | **Integer** |  | [optional] 
+**title** | **String** |  | [optional] 
+**school** | **String** |  | [optional] 
+**nick_name** | **String** |  | [optional] 
+**married_flag** | **BOOLEAN** |  | [optional] 
+**children_flag** | **BOOLEAN** |  | [optional] 
+**significant_other** | **String** |  | [optional] 
+**portal_password** | **String** |  | [optional] 
+**portal_security_level** | **Integer** |  | [optional] 
+**disable_portal_login_flag** | **BOOLEAN** |  | [optional] 
+**unsubscribe_flag** | **BOOLEAN** |  | [optional] 
+**gender** | **String** |  | [optional] 
+**birth_day** | **DateTime** |  | [optional] 
+**anniversary** | **DateTime** |  | [optional] 
+**presence** | **String** |  | [optional] 
+**mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
+**facebook_url** | **String** |  | [optional] 
+**twitter_url** | **String** |  | [optional] 
+**linked_in_url** | **String** |  | [optional] 
+**communication_items** | [**Array&lt;ContactCommunicationItem&gt;**](ContactCommunicationItem.md) |  | [optional] 
+**_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+**custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
+
+

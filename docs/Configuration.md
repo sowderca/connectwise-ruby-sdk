@@ -1,0 +1,57 @@
+# Connectwise::Configuration
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**name** | **String** |  | 
+**type** | [**ConfigurationTypeReference**](ConfigurationTypeReference.md) |  | 
+**status** | [**ConfigurationStatusReference**](ConfigurationStatusReference.md) |  | [optional] 
+**company** | [**CompanyReference**](CompanyReference.md) |  | 
+**contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
+**site** | [**SiteReference**](SiteReference.md) |  | [optional] 
+**location_id** | **Integer** |  | [optional] 
+**business_unit_id** | **Integer** |  | [optional] 
+**device_identifier** | **String** |  | [optional] 
+**serial_number** | **String** |  | [optional] 
+**model_number** | **String** |  | [optional] 
+**tag_number** | **String** |  | [optional] 
+**purchase_date** | **DateTime** |  | [optional] 
+**installation_date** | **DateTime** |  | [optional] 
+**installed_by** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**warranty_expiration_date** | **DateTime** |  | [optional] 
+**vendor_notes** | **String** |  | [optional] 
+**notes** | **String** |  | [optional] 
+**mac_address** | **String** |  | [optional] 
+**last_login_name** | **String** |  | [optional] 
+**bill_flag** | **BOOLEAN** |  | [optional] 
+**backup_successes** | **Integer** |  | [optional] 
+**backup_incomplete** | **Integer** |  | [optional] 
+**backup_failed** | **Integer** |  | [optional] 
+**backup_restores** | **Integer** |  | [optional] 
+**last_backup_date** | **DateTime** |  | [optional] 
+**backup_server_name** | **String** |  | [optional] 
+**backup_billable_space_gb** | **Float** |  | [optional] 
+**backup_protected_device_list** | **String** |  | [optional] 
+**backup_year** | **Integer** |  | [optional] 
+**backup_month** | **Integer** |  | [optional] 
+**ip_address** | **String** |  | [optional] 
+**default_gateway** | **String** |  | [optional] 
+**os_type** | **String** |  | [optional] 
+**os_info** | **String** |  | [optional] 
+**cpu_speed** | **String** |  | [optional] 
+**ram** | **String** |  | [optional] 
+**local_hard_drives** | **String** |  | [optional] 
+**parent_configuration_id** | **Integer** |  | [optional] 
+**vendor** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
+**manufacturer** | [**ManufacturerReference**](ManufacturerReference.md) |  | [optional] 
+**questions** | [**Array&lt;ConfigurationQuestion&gt;**](ConfigurationQuestion.md) |  | [optional] 
+**active_flag** | **BOOLEAN** |  | [optional] 
+**management_link** | **String** |  | [optional] 
+**remote_link** | **String** |  | [optional] 
+**sla** | [**SLAReference**](SLAReference.md) |  | [optional] 
+**mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
+**_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+**custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
+
+

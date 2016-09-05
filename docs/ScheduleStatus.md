@@ -1,0 +1,12 @@
+# Connectwise::ScheduleStatus
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**name** | **String** |  | 
+**default_flag** | **BOOLEAN** |  | [optional] 
+**show_as_tentative_flag** | **BOOLEAN** |  | [optional] 
+**_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+
+
