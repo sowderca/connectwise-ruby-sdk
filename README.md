@@ -39,8 +39,11 @@ require 'connectwise-ruby-sdk'
 # Setup authorization
 Connectwise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+  config.username = 'USERNAME' # in the form of company_id+public_api_key
+  config.password = 'PASSWORD' # private_api_key
+  config.host = 'URL' # your connectwise url
+  config.base_path = '/v4_6_release/apis/3.0'
+  config.scheme = 'https'
 end
 
 api_instance = Connectwise::AccountingBatchTransactionsApi.new
