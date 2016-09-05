@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.email       = ["cameron@sowder.io"]
   s.homepage    = "http://sowder.io"
   s.summary     = "Connectwise ruby gem"
-  s.description = "A ruby client to interact with the Connectwise REST API&#39;s"
+  s.description = "A ruby client to interact with the Connectwise REST API"
   s.license     = "Apache 2.0"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
