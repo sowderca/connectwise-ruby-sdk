@@ -9,7 +9,7 @@ ConnectWise API
 Then either install the gem locally:
 
 ```shell
-gem install ./connectwise-ruby-sdk-1.0.2
+gem install connectwise-ruby-sdk-1.0.2
 ```
 
 Or install from [RubyGems](https://rubygems.org/).
@@ -20,7 +20,7 @@ Add this to the Gemfile:
 ```
 ### Install from Git
 ```ruby
-    gem 'connectwise-ruby-sdk', :git => 'https://github.com/vc3/connectwise-rest-api'
+    gem 'connectwise-ruby-sdk', :git => 'https://github.com/sowderca/connectwise-ruby-sdk'
 ```
 ### Include the Ruby code directly
 
