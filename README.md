@@ -1,5 +1,8 @@
 # connectwise-ruby-sdk
- [![Build Status](https://travis-ci.org/sowderca/connectwise-ruby-sdk.svg?branch=master)](https://travis-ci.org/sowderca/connectwise-ruby-sdk) [![Dependency Status](https://gemnasium.com/badges/github.com/sowderca/connectwise-ruby-sdk.svg)](https://gemnasium.com/github.com/sowderca/connectwise-ruby-sdk)
+ [![Build Status](https://travis-ci.org/sowderca/connectwise-ruby-sdk.svg?branch=master)](https://travis-ci.org/sowderca/connectwise-ruby-sdk) 
+ [![Dependency Status](https://gemnasium.com/badges/github.com/sowderca/connectwise-ruby-sdk.svg)](https://gemnasium.com/github.com/sowderca/connectwise-ruby-sdk)
+ [![Gem Version](https://badge.fury.io/rb/connectwise-ruby-sdk.svg)](https://badge.fury.io/rb/connectwise-ruby-sdk)
+ 
 
 connectwise-ruby-sdk - the Ruby gem for the Connectwise REST API
 
