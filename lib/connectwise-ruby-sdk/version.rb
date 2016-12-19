@@ -22,5 +22,5 @@ limitations under the License.
 =end
 
 module Connectwise
-  VERSION = "1.0.2"
+  VERSION = "1.0.3"
 end
