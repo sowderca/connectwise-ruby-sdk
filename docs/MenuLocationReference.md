@@ -1,4 +1,4 @@
-# Connectwise::MenuLocationReference
+# ConnectWise::MenuLocationReference
 
 ## Properties
 Name | Type | Description | Notes

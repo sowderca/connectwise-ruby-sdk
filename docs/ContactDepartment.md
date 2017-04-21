@@ -1,4 +1,4 @@
-# Connectwise::ContactDepartment
+# ConnectWise::ContactDepartment
 
 ## Properties
 Name | Type | Description | Notes

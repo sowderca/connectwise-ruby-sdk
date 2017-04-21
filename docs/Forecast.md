@@ -1,4 +1,4 @@
-# Connectwise::Forecast
+# ConnectWise::Forecast
 
 ## Properties
 Name | Type | Description | Notes

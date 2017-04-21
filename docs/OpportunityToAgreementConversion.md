@@ -1,4 +1,4 @@
-# Connectwise::OpportunityToAgreementConversion
+# ConnectWise::OpportunityToAgreementConversion
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **end_date** | **String** |  | [optional] 
 **no_ending_date_flag** | **BOOLEAN** |  | [optional] 
 **bill_cycle_id** | **Integer** |  | [optional] 
+**bill_one_time_flag** | **BOOLEAN** |  | [optional] 
 **location_id** | **Integer** |  | [optional] 
 **business_unit_id** | **Integer** |  | [optional] 
 **include_all_notes_flag** | **BOOLEAN** |  | [optional] 

@@ -1,4 +1,4 @@
-# Connectwise::Transaction
+# ConnectWise::Transaction
 
 ## Properties
 Name | Type | Description | Notes

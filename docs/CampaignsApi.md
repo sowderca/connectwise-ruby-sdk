@@ -1,4 +1,4 @@
-# Connectwise::CampaignsApi
+# ConnectWise::CampaignsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -29,22 +29,22 @@ Get Campaigns Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.marketing_campaigns_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_count_get: #{e}"
 end
 ```
@@ -82,17 +82,19 @@ Get Campaigns
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -100,7 +102,7 @@ opts = {
 begin
   result = api_instance.marketing_campaigns_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_get: #{e}"
 end
 ```
@@ -111,6 +113,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -141,13 +145,13 @@ Get Campaign Activities Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
@@ -155,7 +159,7 @@ id = 56 # Integer |
 begin
   result = api_instance.marketing_campaigns_id_activities_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_activities_count_get: #{e}"
 end
 ```
@@ -193,13 +197,13 @@ Get Campaign Activities
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
@@ -211,7 +215,7 @@ opts = {
 begin
   result = api_instance.marketing_campaigns_id_activities_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_activities_get: #{e}"
 end
 ```
@@ -251,20 +255,20 @@ Delete Campaign By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.marketing_campaigns_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_delete: #{e}"
 end
 ```
@@ -302,13 +306,13 @@ Get Campaign By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
@@ -316,7 +320,7 @@ id = 56 # Integer |
 begin
   result = api_instance.marketing_campaigns_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_get: #{e}"
 end
 ```
@@ -354,13 +358,13 @@ Get Campaign Opportunities Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
@@ -368,7 +372,7 @@ id = 56 # Integer |
 begin
   result = api_instance.marketing_campaigns_id_opportunities_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_opportunities_count_get: #{e}"
 end
 ```
@@ -406,13 +410,13 @@ Get Campaign Opportunities
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
@@ -424,7 +428,7 @@ opts = {
 begin
   result = api_instance.marketing_campaigns_id_opportunities_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_opportunities_get: #{e}"
 end
 ```
@@ -464,23 +468,23 @@ Update Campaign
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.marketing_campaigns_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_patch: #{e}"
 end
 ```
@@ -519,23 +523,23 @@ Replace Campaign
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
 id = 56 # Integer | 
 
-campaign = Connectwise::Campaign.new # Campaign | 
+campaign = ConnectWise::Campaign.new # Campaign | 
 
 
 begin
   result = api_instance.marketing_campaigns_id_put(id, campaign)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_id_put: #{e}"
 end
 ```
@@ -574,21 +578,21 @@ Create Campaign
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CampaignsApi.new
+api_instance = ConnectWise::CampaignsApi.new
 
-campaign = Connectwise::Campaign.new # Campaign | 
+campaign = ConnectWise::Campaign.new # Campaign | 
 
 
 begin
   result = api_instance.marketing_campaigns_post(campaign)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CampaignsApi->marketing_campaigns_post: #{e}"
 end
 ```

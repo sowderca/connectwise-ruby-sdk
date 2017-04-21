@@ -1,4 +1,4 @@
-# Connectwise::SubType
+# ConnectWise::SubType
 
 ## Properties
 Name | Type | Description | Notes

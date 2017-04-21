@@ -1,4 +1,4 @@
-# Connectwise::PatchOperation
+# ConnectWise::PatchOperation
 
 ## Properties
 Name | Type | Description | Notes

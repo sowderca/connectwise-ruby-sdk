@@ -1,4 +1,4 @@
-# Connectwise::ValidationError
+# ConnectWise::ValidationError
 
 ## Properties
 Name | Type | Description | Notes

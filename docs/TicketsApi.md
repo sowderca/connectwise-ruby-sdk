@@ -1,4 +1,4 @@
-# Connectwise::TicketsApi
+# ConnectWise::TicketsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -41,22 +41,23 @@ Get Tickets Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
+  custom_field_conditions: "custom_field_conditions_example" # String | 
 }
 
 begin
   result = api_instance.service_tickets_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_count_get: #{e}"
 end
 ```
@@ -66,6 +67,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
+ **custom_field_conditions** | **String**|  | [optional] 
 
 ### Return type
 
@@ -94,17 +96,19 @@ Get Tickets
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -112,7 +116,7 @@ opts = {
 begin
   result = api_instance.service_tickets_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_get: #{e}"
 end
 ```
@@ -123,6 +127,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -153,13 +159,13 @@ Get Ticket Activities Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -167,7 +173,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_activities_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_activities_count_get: #{e}"
 end
 ```
@@ -205,13 +211,13 @@ Get Ticket Activities
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -223,7 +229,7 @@ opts = {
 begin
   result = api_instance.service_tickets_id_activities_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_activities_get: #{e}"
 end
 ```
@@ -263,13 +269,13 @@ Delete Configuration Association
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -278,7 +284,7 @@ config_id = 56 # Integer |
 
 begin
   api_instance.service_tickets_id_configurations_config_id_delete(id, config_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_configurations_config_id_delete: #{e}"
 end
 ```
@@ -317,13 +323,13 @@ Get Configuration Association
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -333,7 +339,7 @@ config_id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_configurations_config_id_get(id, config_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_configurations_config_id_get: #{e}"
 end
 ```
@@ -372,13 +378,13 @@ Get Ticket Configurations Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -386,7 +392,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_configurations_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_configurations_count_get: #{e}"
 end
 ```
@@ -424,13 +430,13 @@ Get Ticket Configurations
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -442,7 +448,7 @@ opts = {
 begin
   result = api_instance.service_tickets_id_configurations_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_configurations_get: #{e}"
 end
 ```
@@ -482,23 +488,23 @@ Create Configuration Association
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
-configuration = Connectwise::ConfigurationReference.new # ConfigurationReference | 
+configuration = ConnectWise::ConfigurationReference.new # ConfigurationReference | 
 
 
 begin
   result = api_instance.service_tickets_id_configurations_post(id, configuration)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_configurations_post: #{e}"
 end
 ```
@@ -537,20 +543,20 @@ Delete Ticket By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.service_tickets_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_delete: #{e}"
 end
 ```
@@ -588,13 +594,13 @@ Get Ticket Documents Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -602,7 +608,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_documents_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_documents_count_get: #{e}"
 end
 ```
@@ -640,13 +646,13 @@ Get Ticket Documents
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -658,7 +664,7 @@ opts = {
 begin
   result = api_instance.service_tickets_id_documents_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_documents_get: #{e}"
 end
 ```
@@ -698,13 +704,13 @@ Get Ticket By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -712,7 +718,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_get: #{e}"
 end
 ```
@@ -750,23 +756,23 @@ Update Ticket
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_tickets_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_patch: #{e}"
 end
 ```
@@ -805,13 +811,13 @@ Get Ticket Products Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -819,7 +825,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_products_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_products_count_get: #{e}"
 end
 ```
@@ -857,13 +863,13 @@ Get Ticket Products
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -875,7 +881,7 @@ opts = {
 begin
   result = api_instance.service_tickets_id_products_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_products_get: #{e}"
 end
 ```
@@ -915,23 +921,23 @@ Replace Ticket
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
-ticket = Connectwise::Ticket.new # Ticket | 
+ticket = ConnectWise::Ticket.new # Ticket | 
 
 
 begin
   result = api_instance.service_tickets_id_put(id, ticket)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_put: #{e}"
 end
 ```
@@ -970,13 +976,13 @@ Get Ticket Schedule Entries Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -984,7 +990,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_scheduleentries_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_scheduleentries_count_get: #{e}"
 end
 ```
@@ -1022,13 +1028,13 @@ Get Ticket Schedule Entries
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -1040,7 +1046,7 @@ opts = {
 begin
   result = api_instance.service_tickets_id_scheduleentries_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_scheduleentries_get: #{e}"
 end
 ```
@@ -1080,13 +1086,13 @@ Get Ticket Time Entries Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -1094,7 +1100,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_tickets_id_timeentries_count_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_timeentries_count_get: #{e}"
 end
 ```
@@ -1132,13 +1138,13 @@ Get Ticket Time Entries
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
 id = 56 # Integer | 
 
@@ -1150,7 +1156,7 @@ opts = {
 begin
   result = api_instance.service_tickets_id_timeentries_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_id_timeentries_get: #{e}"
 end
 ```
@@ -1190,21 +1196,21 @@ Create Ticket
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
-ticket = Connectwise::Ticket.new # Ticket | 
+ticket = ConnectWise::Ticket.new # Ticket | 
 
 
 begin
   result = api_instance.service_tickets_post(ticket)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_post: #{e}"
 end
 ```
@@ -1242,15 +1248,15 @@ Ticket Search
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TicketsApi.new
+api_instance = ConnectWise::TicketsApi.new
 
-filter_values = Connectwise::FilterValues.new # FilterValues | 
+filter_values = ConnectWise::FilterValues.new # FilterValues | 
 
 opts = { 
   page: 56, # Integer | 
@@ -1260,7 +1266,7 @@ opts = {
 begin
   result = api_instance.service_tickets_search_post(filter_values, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TicketsApi->service_tickets_search_post: #{e}"
 end
 ```

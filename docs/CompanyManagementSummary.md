@@ -1,4 +1,4 @@
-# Connectwise::CompanyManagementSummary
+# ConnectWise::CompanyManagementSummary
 
 ## Properties
 Name | Type | Description | Notes

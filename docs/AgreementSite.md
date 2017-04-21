@@ -1,4 +1,4 @@
-# Connectwise::AgreementSite
+# ConnectWise::AgreementSite
 
 ## Properties
 Name | Type | Description | Notes

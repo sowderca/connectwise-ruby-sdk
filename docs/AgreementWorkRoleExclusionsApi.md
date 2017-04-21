@@ -1,4 +1,4 @@
-# Connectwise::AgreementWorkRoleExclusionsApi
+# ConnectWise::AgreementWorkRoleExclusionsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -22,24 +22,24 @@ Get Work Role Exclusions Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementWorkRoleExclusionsApi.new
+api_instance = ConnectWise::AgreementWorkRoleExclusionsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.finance_agreements_id_work_role_exclusions_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementWorkRoleExclusionsApi->finance_agreements_id_work_role_exclusions_count_get: #{e}"
 end
 ```
@@ -78,19 +78,21 @@ Get Work Role Exclusions
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementWorkRoleExclusionsApi.new
+api_instance = ConnectWise::AgreementWorkRoleExclusionsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -98,7 +100,7 @@ opts = {
 begin
   result = api_instance.finance_agreements_id_work_role_exclusions_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementWorkRoleExclusionsApi->finance_agreements_id_work_role_exclusions_get: #{e}"
 end
 ```
@@ -110,6 +112,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -140,23 +144,23 @@ Create Work Role Exclusion
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementWorkRoleExclusionsApi.new
+api_instance = ConnectWise::AgreementWorkRoleExclusionsApi.new
 
 id = 56 # Integer | 
 
-work_role_exclusion = Connectwise::AgreementWorkRoleExclusion.new # AgreementWorkRoleExclusion | 
+work_role_exclusion = ConnectWise::AgreementWorkRoleExclusion.new # AgreementWorkRoleExclusion | 
 
 
 begin
   result = api_instance.finance_agreements_id_work_role_exclusions_post(id, work_role_exclusion)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementWorkRoleExclusionsApi->finance_agreements_id_work_role_exclusions_post: #{e}"
 end
 ```
@@ -195,13 +199,13 @@ Delete Work Role Exclusion By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementWorkRoleExclusionsApi.new
+api_instance = ConnectWise::AgreementWorkRoleExclusionsApi.new
 
 id = 56 # Integer | 
 
@@ -210,7 +214,7 @@ work_role_exclusion_id = 56 # Integer |
 
 begin
   api_instance.finance_agreements_id_work_role_exclusions_work_role_exclusion_id_delete(id, work_role_exclusion_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementWorkRoleExclusionsApi->finance_agreements_id_work_role_exclusions_work_role_exclusion_id_delete: #{e}"
 end
 ```

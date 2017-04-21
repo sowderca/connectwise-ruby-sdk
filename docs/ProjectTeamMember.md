@@ -1,4 +1,4 @@
-# Connectwise::ProjectTeamMember
+# ConnectWise::ProjectTeammember
 
 ## Properties
 Name | Type | Description | Notes

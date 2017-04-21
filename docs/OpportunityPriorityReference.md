@@ -1,4 +1,4 @@
-# Connectwise::OpportunityPriorityReference
+# ConnectWise::OpportunityPriorityReference
 
 ## Properties
 Name | Type | Description | Notes

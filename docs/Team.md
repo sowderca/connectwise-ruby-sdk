@@ -1,10 +1,10 @@
-# Connectwise::Team
+# ConnectWise::Team
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
-**type** | **String** |  | 
+**type** | **String** |  | [optional] 
 **member** | [**MemberReference**](MemberReference.md) |  | [optional] 
 **sales_team** | [**SalesTeamReference**](SalesTeamReference.md) |  | [optional] 
 **commission_percent** | **Integer** |  | [optional] 

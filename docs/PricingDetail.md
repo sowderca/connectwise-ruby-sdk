@@ -1,4 +1,4 @@
-# Connectwise::PricingDetail
+# ConnectWise::PricingDetail
 
 ## Properties
 Name | Type | Description | Notes

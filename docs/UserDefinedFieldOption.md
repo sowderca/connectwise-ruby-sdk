@@ -1,4 +1,4 @@
-# Connectwise::UserDefinedFieldOption
+# ConnectWise::UserDefinedFieldOption
 
 ## Properties
 Name | Type | Description | Notes

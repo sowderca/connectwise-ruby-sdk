@@ -1,4 +1,4 @@
-# Connectwise::ContactTypeReference
+# ConnectWise::ContactTypeReference
 
 ## Properties
 Name | Type | Description | Notes

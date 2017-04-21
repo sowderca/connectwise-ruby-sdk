@@ -1,4 +1,4 @@
-# Connectwise::GenericIdIdentifierReference
+# ConnectWise::GenericIdIdentifierReference
 
 ## Properties
 Name | Type | Description | Notes

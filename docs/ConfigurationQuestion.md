@@ -1,4 +1,4 @@
-# Connectwise::ConfigurationQuestion
+# ConnectWise::ConfigurationQuestion
 
 ## Properties
 Name | Type | Description | Notes

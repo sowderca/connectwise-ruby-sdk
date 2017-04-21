@@ -1,4 +1,4 @@
-# Connectwise::PurchaseOrderLineItem
+# ConnectWise::PurchaseOrderLineItem
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **canceled_reason** | **String** |  | [optional] 
 **closed_flag** | **BOOLEAN** |  | [optional] 
 **date_canceled** | **DateTime** |  | [optional] 
+**date_canceled_utc** | **DateTime** |  | [optional] 
 **description** | **String** |  | 
 **display_internal_notes_flag** | **BOOLEAN** |  | [optional] 
 **expected_ship_date** | **DateTime** |  | [optional] 

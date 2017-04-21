@@ -1,4 +1,4 @@
-# Connectwise::CatalogsItemApi
+# ConnectWise::CatalogsItemApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -26,13 +26,13 @@ Get Inventory Quantity On Hand
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 catalog_item_identifier = "catalog_item_identifier_example" # String | 
 
@@ -43,7 +43,7 @@ opts = {
 begin
   result = api_instance.procurement_catalog_catalog_item_identifier_quantity_on_hand_get(catalog_item_identifier, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_catalog_item_identifier_quantity_on_hand_get: #{e}"
 end
 ```
@@ -82,22 +82,22 @@ Get Catalogs Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.procurement_catalog_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_count_get: #{e}"
 end
 ```
@@ -135,17 +135,19 @@ Get Catalogs
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -153,7 +155,7 @@ opts = {
 begin
   result = api_instance.procurement_catalog_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_get: #{e}"
 end
 ```
@@ -164,6 +166,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -194,20 +198,20 @@ Delete Catalog By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.procurement_catalog_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_id_delete: #{e}"
 end
 ```
@@ -245,13 +249,13 @@ Get Catalog By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 id = 56 # Integer | 
 
@@ -259,7 +263,7 @@ id = 56 # Integer |
 begin
   result = api_instance.procurement_catalog_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_id_get: #{e}"
 end
 ```
@@ -297,23 +301,23 @@ Update Catalog
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.procurement_catalog_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_id_patch: #{e}"
 end
 ```
@@ -352,23 +356,23 @@ Replace Catalog
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
 id = 56 # Integer | 
 
-catalog_item = Connectwise::CatalogItem.new # CatalogItem | 
+catalog_item = ConnectWise::CatalogItem.new # CatalogItem | 
 
 
 begin
   result = api_instance.procurement_catalog_id_put(id, catalog_item)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_id_put: #{e}"
 end
 ```
@@ -407,21 +411,21 @@ Create Catalog
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CatalogsItemApi.new
+api_instance = ConnectWise::CatalogsItemApi.new
 
-catalog_item = Connectwise::CatalogItem.new # CatalogItem | 
+catalog_item = ConnectWise::CatalogItem.new # CatalogItem | 
 
 
 begin
   result = api_instance.procurement_catalog_post(catalog_item)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CatalogsItemApi->procurement_catalog_post: #{e}"
 end
 ```

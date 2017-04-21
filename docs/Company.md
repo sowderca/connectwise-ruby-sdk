@@ -1,4 +1,4 @@
-# Connectwise::Company
+# ConnectWise::Company
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **status** | [**CompanyStatusReference**](CompanyStatusReference.md) |  | 
 **type** | [**CompanyTypeReference**](CompanyTypeReference.md) |  | 
-**address_line1** | **String** |  | 
-**address_line2** | **String** |  | [optional] 
-**city** | **String** |  | [optional] 
-**state** | **String** |  | [optional] 
-**zip** | **String** |  | [optional] 
+**address_line1** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, and/or zip | [optional] 
+**address_line2** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, and/or zip | [optional] 
+**city** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, and/or zip | [optional] 
+**state** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, and/or zip | [optional] 
+**zip** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, and/or zip | [optional] 
 **country** | [**CountryReference**](CountryReference.md) |  | [optional] 
 **phone_number** | **String** |  | [optional] 
 **fax_number** | **String** |  | [optional] 
@@ -42,11 +42,25 @@ Name | Type | Description | Notes
 **user_defined_field8** | **String** |  | [optional] 
 **user_defined_field9** | **String** |  | [optional] 
 **user_defined_field10** | **String** |  | [optional] 
+**vendor_identifier** | **String** |  | [optional] 
+**tax_identifier** | **String** |  | [optional] 
+**tax_code** | [**TaxCodeReference**](TaxCodeReference.md) | New companies will be created with the default tax code unless otherwise specified. | [optional] 
+**billing_terms** | [**BillingTermsReference**](BillingTermsReference.md) |  | [optional] 
+**invoice_template** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  | [optional] 
+**pricing_schedule** | [**PricingScheduleReference**](PricingScheduleReference.md) |  | [optional] 
+**company_entity_type** | [**EntityTypeReference**](EntityTypeReference.md) | Based on CompanyEntityType Report | [optional] 
+**bill_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
+**billing_site** | [**SiteReference**](SiteReference.md) |  | [optional] 
+**billing_contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
+**invoice_delivery_method** | [**BillingDeliveryReference**](BillingDeliveryReference.md) |  | [optional] 
+**invoice_to_email_address** | **String** |  | [optional] 
+**invoice_cc_email_address** | **String** |  | [optional] 
 **deleted_flag** | **BOOLEAN** |  | [optional] 
 **date_deleted** | **DateTime** |  | [optional] 
 **deleted_by** | **String** |  | [optional] 
 **mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
 **currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
+**territory_manager** | [**MemberReference**](MemberReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 

@@ -1,4 +1,4 @@
-# Connectwise::PortalSecurity
+# ConnectWise::PortalSecurity
 
 ## Properties
 Name | Type | Description | Notes

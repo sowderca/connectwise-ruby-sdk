@@ -1,4 +1,4 @@
-# Connectwise::CompanyTypeReference
+# ConnectWise::CompanyTypeReference
 
 ## Properties
 Name | Type | Description | Notes

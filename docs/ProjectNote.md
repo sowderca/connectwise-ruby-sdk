@@ -1,4 +1,4 @@
-# Connectwise::ProjectNote
+# ConnectWise::ProjectNote
 
 ## Properties
 Name | Type | Description | Notes

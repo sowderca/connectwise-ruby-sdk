@@ -1,4 +1,4 @@
-# Connectwise::WorkRoleReference
+# ConnectWise::WorkRoleReference
 
 ## Properties
 Name | Type | Description | Notes

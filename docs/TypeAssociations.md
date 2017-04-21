@@ -1,4 +1,4 @@
-# Connectwise::TypeAssociations
+# ConnectWise::TypeAssociations
 
 ## Properties
 Name | Type | Description | Notes

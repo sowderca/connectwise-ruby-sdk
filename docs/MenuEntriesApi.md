@@ -1,4 +1,4 @@
-# Connectwise::MenuEntriesApi
+# ConnectWise::MenuEntriesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -27,22 +27,22 @@ Get Menu Entries Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.system_menuentries_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_count_get: #{e}"
 end
 ```
@@ -80,17 +80,19 @@ Get Menu Entries
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -98,7 +100,7 @@ opts = {
 begin
   result = api_instance.system_menuentries_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_get: #{e}"
 end
 ```
@@ -109,6 +111,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -139,20 +143,20 @@ Delete Menu Entry By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.system_menuentries_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_id_delete: #{e}"
 end
 ```
@@ -190,13 +194,13 @@ Get Menu Entry By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 id = 56 # Integer | 
 
@@ -204,7 +208,7 @@ id = 56 # Integer |
 begin
   result = api_instance.system_menuentries_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_id_get: #{e}"
 end
 ```
@@ -242,13 +246,13 @@ Get Menu Entry Image
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 id = 56 # Integer | 
 
@@ -259,7 +263,7 @@ opts = {
 
 begin
   api_instance.system_menuentries_id_image_get(id, opts)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_id_image_get: #{e}"
 end
 ```
@@ -288,7 +292,7 @@ nil (empty response body)
 
 
 # **system_menuentries_id_image_post**
-> system_menuentries_id_image_post(id)
+> system_menuentries_id_image_post(id, opts)
 
 
 
@@ -299,20 +303,23 @@ Upload Menu Entry Image
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 id = 56 # Integer | 
 
+opts = { 
+  file: File.new("/path/to/file.txt") # File | File to upload
+}
 
 begin
-  api_instance.system_menuentries_id_image_post(id)
-rescue Connectwise::ApiError => e
+  api_instance.system_menuentries_id_image_post(id, opts)
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_id_image_post: #{e}"
 end
 ```
@@ -322,6 +329,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
+ **file** | **File**| File to upload | [optional] 
 
 ### Return type
 
@@ -333,7 +341,7 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
 
@@ -350,23 +358,23 @@ Update Menu Entry
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.system_menuentries_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_id_patch: #{e}"
 end
 ```
@@ -405,23 +413,23 @@ Replace Menu Entry
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
 id = 56 # Integer | 
 
-menu_entry = Connectwise::MenuEntry.new # MenuEntry | 
+menu_entry = ConnectWise::MenuEntry.new # MenuEntry | 
 
 
 begin
   result = api_instance.system_menuentries_id_put(id, menu_entry)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_id_put: #{e}"
 end
 ```
@@ -460,21 +468,21 @@ Create Menu Entry
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MenuEntriesApi.new
+api_instance = ConnectWise::MenuEntriesApi.new
 
-menu_entry = Connectwise::MenuEntry.new # MenuEntry | 
+menu_entry = ConnectWise::MenuEntry.new # MenuEntry | 
 
 
 begin
   result = api_instance.system_menuentries_post(menu_entry)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MenuEntriesApi->system_menuentries_post: #{e}"
 end
 ```

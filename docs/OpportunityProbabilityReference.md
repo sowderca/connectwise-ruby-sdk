@@ -1,4 +1,4 @@
-# Connectwise::OpportunityProbabilityReference
+# ConnectWise::OpportunityProbabilityReference
 
 ## Properties
 Name | Type | Description | Notes

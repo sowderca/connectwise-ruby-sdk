@@ -1,4 +1,4 @@
-# Connectwise::MembersApi
+# ConnectWise::MembersApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -23,22 +23,22 @@ Get Members Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MembersApi.new
+api_instance = ConnectWise::MembersApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.system_members_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MembersApi->system_members_count_get: #{e}"
 end
 ```
@@ -76,17 +76,19 @@ Get Members
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MembersApi.new
+api_instance = ConnectWise::MembersApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -94,7 +96,7 @@ opts = {
 begin
   result = api_instance.system_members_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MembersApi->system_members_get: #{e}"
 end
 ```
@@ -105,6 +107,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -135,13 +139,13 @@ Get Member By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MembersApi.new
+api_instance = ConnectWise::MembersApi.new
 
 member_identifier = "member_identifier_example" # String | 
 
@@ -149,7 +153,7 @@ member_identifier = "member_identifier_example" # String |
 begin
   result = api_instance.system_members_member_identifier_get(member_identifier)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MembersApi->system_members_member_identifier_get: #{e}"
 end
 ```
@@ -187,13 +191,13 @@ Get Member Image
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MembersApi.new
+api_instance = ConnectWise::MembersApi.new
 
 member_identifier = "member_identifier_example" # String | 
 
@@ -204,7 +208,7 @@ opts = {
 
 begin
   api_instance.system_members_member_identifier_image_get(member_identifier, opts)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MembersApi->system_members_member_identifier_image_get: #{e}"
 end
 ```
@@ -244,13 +248,13 @@ Create Token By Member Identifier
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::MembersApi.new
+api_instance = ConnectWise::MembersApi.new
 
 member_identifier = "member_identifier_example" # String | 
 
@@ -258,7 +262,7 @@ member_identifier = "member_identifier_example" # String |
 begin
   result = api_instance.system_members_member_identifier_tokens_post(member_identifier)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling MembersApi->system_members_member_identifier_tokens_post: #{e}"
 end
 ```

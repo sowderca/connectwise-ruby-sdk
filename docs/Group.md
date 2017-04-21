@@ -1,4 +1,4 @@
-# Connectwise::Group
+# ConnectWise::Group
 
 ## Properties
 Name | Type | Description | Notes

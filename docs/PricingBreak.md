@@ -1,4 +1,4 @@
-# Connectwise::PricingBreak
+# ConnectWise::PricingBreak
 
 ## Properties
 Name | Type | Description | Notes

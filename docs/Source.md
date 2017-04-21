@@ -1,4 +1,4 @@
-# Connectwise::Source
+# ConnectWise::Source
 
 ## Properties
 Name | Type | Description | Notes

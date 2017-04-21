@@ -1,4 +1,4 @@
-# Connectwise::CatalogItemReference
+# ConnectWise::CatalogItemReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::DocumentInfo
+# ConnectWise::DocumentInfo
 
 ## Properties
 Name | Type | Description | Notes

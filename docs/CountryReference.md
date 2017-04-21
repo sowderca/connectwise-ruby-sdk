@@ -1,4 +1,4 @@
-# Connectwise::CountryReference
+# ConnectWise::CountryReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::FormSubmitted
+# ConnectWise::FormSubmitted
 
 ## Properties
 Name | Type | Description | Notes

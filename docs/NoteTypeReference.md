@@ -1,4 +1,4 @@
-# Connectwise::NoteTypeReference
+# ConnectWise::NoteTypeReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::CatalogComponent
+# ConnectWise::CatalogComponent
 
 ## Properties
 Name | Type | Description | Notes

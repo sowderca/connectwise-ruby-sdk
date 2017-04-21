@@ -1,4 +1,4 @@
-# Connectwise::ConfigurationStatusReference
+# ConnectWise::ConfigurationStatusReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::Member
+# ConnectWise::Member
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **daily_capacity** | **Float** |  | [optional] 
 **days_tolerance** | **Integer** |  | [optional] 
 **default_department_id** | **Integer** |  | 
-**default_email** | **String** |  | [optional] 
+**default_email** | **String** |  | 
 **default_location_id** | **Integer** |  | 
-**default_phone** | **String** |  | [optional] 
+**default_phone** | **String** |  | 
 **disable_online_flag** | **BOOLEAN** |  | [optional] 
 **enable_ldap_authentication_flag** | **BOOLEAN** |  | [optional] 
 **enable_mobile_flag** | **BOOLEAN** |  | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **expense_approver** | [**MemberReference**](MemberReference.md) |  | 
 **first_name** | **String** |  | 
 **hide_member_in_dispatch_portal_flag** | **BOOLEAN** |  | [optional] 
-**hire_date** | **DateTime** |  | [optional] 
+**hire_date** | **DateTime** |  | 
 **home_email** | **String** |  | [optional] 
 **home_extension** | **String** |  | [optional] 
 **home_phone** | **String** |  | [optional] 
@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **include_in_utilization_reporting_flag** | **BOOLEAN** |  | [optional] 
 **last_login** | **String** |  | [optional] 
 **last_name** | **String** |  | 
-**license_class** | **String** |  | 
+**license_class** | **String** | F &#x3D; Regular Member, A &#x3D; API Member, C &#x3D; StreamlineIT Member, X &#x3D; Subcontractor Member | 
 **mapi_name** | **String** |  | [optional] 
 **middle_initial** | **String** |  | [optional] 
 **minimum_hours** | **Float** |  | [optional] 

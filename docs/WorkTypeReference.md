@@ -1,4 +1,4 @@
-# Connectwise::WorkTypeReference
+# ConnectWise::WorkTypeReference
 
 ## Properties
 Name | Type | Description | Notes

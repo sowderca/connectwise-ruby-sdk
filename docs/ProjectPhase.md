@@ -1,4 +1,4 @@
-# Connectwise::ProjectPhase
+# ConnectWise::ProjectPhase
 
 ## Properties
 Name | Type | Description | Notes
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **notes** | **String** |  | [optional] 
 **deadline_date** | **DateTime** |  | [optional] 
 **bill_separately_flag** | **BOOLEAN** |  | [optional] 
-**billing_method** | **String** |  | [optional] 
+**billing_method** | **String** | billingMethod is required if the phase billSeparatelyFlag is true | [optional] 
 **scheduled_hours** | **Float** |  | [optional] 
 **scheduled_start** | **String** |  | [optional] 
 **scheduled_end** | **String** |  | [optional] 
@@ -29,6 +29,19 @@ Name | Type | Description | Notes
 **budget_hours** | **Float** |  | [optional] 
 **location_id** | **Integer** |  | [optional] 
 **business_unit_id** | **Integer** |  | [optional] 
+**hourly_rate** | **Float** |  | [optional] 
+**billing_start_date** | **DateTime** |  | [optional] 
+**bill_phase_closed_flag** | **BOOLEAN** | This phase can only be billed after it has been closed | [optional] 
+**bill_project_closed_flag** | **BOOLEAN** | This phase can only be billed after the project has been closed | [optional] 
+**downpayment** | **Float** |  | [optional] 
+**po_number** | **String** |  | [optional] 
+**po_amount** | **Float** |  | [optional] 
+**estimated_time_cost** | **Float** |  | [optional] 
+**estimated_expense_cost** | **Float** |  | [optional] 
+**estimated_product_cost** | **Float** |  | [optional] 
+**estimated_time_revenue** | **Float** |  | [optional] 
+**estimated_expense_revenue** | **Float** |  | [optional] 
+**estimated_product_revenue** | **Float** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

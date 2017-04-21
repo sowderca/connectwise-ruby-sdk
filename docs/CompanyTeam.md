@@ -1,4 +1,4 @@
-# Connectwise::CompanyTeam
+# ConnectWise::CompanyTeam
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::SubCategory
+# ConnectWise::SubCategory
 
 ## Properties
 Name | Type | Description | Notes

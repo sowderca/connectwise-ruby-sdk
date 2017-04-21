@@ -1,4 +1,4 @@
-# Connectwise::ManufacturerReference
+# ConnectWise::ManufacturerReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::Invoice
+# ConnectWise::Invoice
 
 ## Properties
 Name | Type | Description | Notes

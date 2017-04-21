@@ -1,4 +1,4 @@
-# Connectwise::AgreementWorkRole
+# ConnectWise::AgreementWorkRole
 
 ## Properties
 Name | Type | Description | Notes

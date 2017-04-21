@@ -1,4 +1,4 @@
-# Connectwise::UnpostedExpense
+# ConnectWise::UnpostedExpense
 
 ## Properties
 Name | Type | Description | Notes

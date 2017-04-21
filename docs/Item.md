@@ -1,4 +1,4 @@
-# Connectwise::Item
+# ConnectWise::Item
 
 ## Properties
 Name | Type | Description | Notes

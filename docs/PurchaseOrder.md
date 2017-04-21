@@ -1,4 +1,4 @@
-# Connectwise::PurchaseOrder
+# ConnectWise::PurchaseOrder
 
 ## Properties
 Name | Type | Description | Notes

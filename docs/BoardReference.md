@@ -1,4 +1,4 @@
-# Connectwise::BoardReference
+# ConnectWise::BoardReference
 
 ## Properties
 Name | Type | Description | Notes

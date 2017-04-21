@@ -1,4 +1,4 @@
-# Connectwise::Track
+# ConnectWise::Track
 
 ## Properties
 Name | Type | Description | Notes

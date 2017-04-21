@@ -1,4 +1,4 @@
-# Connectwise::ProductRecurring
+# ConnectWise::ProductRecurring
 
 ## Properties
 Name | Type | Description | Notes

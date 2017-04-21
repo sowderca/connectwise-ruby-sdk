@@ -1,4 +1,4 @@
-# Connectwise::CustomFieldValue
+# ConnectWise::CustomFieldValue
 
 ## Properties
 Name | Type | Description | Notes

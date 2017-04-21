@@ -1,4 +1,4 @@
-# Connectwise::ScheduleType
+# ConnectWise::ScheduleType
 
 ## Properties
 Name | Type | Description | Notes

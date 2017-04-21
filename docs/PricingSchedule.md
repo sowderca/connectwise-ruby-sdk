@@ -1,4 +1,4 @@
-# Connectwise::PricingSchedule
+# ConnectWise::PricingSchedule
 
 ## Properties
 Name | Type | Description | Notes

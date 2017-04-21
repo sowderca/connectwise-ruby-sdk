@@ -1,4 +1,4 @@
-# Connectwise::ChargeCodeReference
+# ConnectWise::ChargeCodeReference
 
 ## Properties
 Name | Type | Description | Notes

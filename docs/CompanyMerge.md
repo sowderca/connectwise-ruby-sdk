@@ -1,4 +1,4 @@
-# Connectwise::CompanyMerge
+# ConnectWise::CompanyMerge
 
 ## Properties
 Name | Type | Description | Notes

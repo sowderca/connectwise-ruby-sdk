@@ -1,4 +1,4 @@
-# Connectwise::CampaignStatus
+# ConnectWise::CampaignStatus
 
 ## Properties
 Name | Type | Description | Notes

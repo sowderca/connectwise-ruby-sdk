@@ -1,4 +1,4 @@
-# Connectwise::ServiceTeamReference
+# ConnectWise::ServiceTeamReference
 
 ## Properties
 Name | Type | Description | Notes

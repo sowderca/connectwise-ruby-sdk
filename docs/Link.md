@@ -1,4 +1,4 @@
-# Connectwise::Link
+# ConnectWise::Link
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::ServiceTypeReference
+# ConnectWise::ServiceTypeReference
 
 ## Properties
 Name | Type | Description | Notes

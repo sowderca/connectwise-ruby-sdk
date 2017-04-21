@@ -1,4 +1,4 @@
-# Connectwise::Addition
+# ConnectWise::Addition
 
 ## Properties
 Name | Type | Description | Notes
@@ -25,6 +25,11 @@ Name | Type | Description | Notes
 **ext_cost** | **Float** |  | [optional] 
 **sequence_number** | **Float** |  | [optional] 
 **margin** | **Float** |  | [optional] 
+**prorate_cost** | **Float** |  | [optional] 
+**prorate_price** | **Float** |  | [optional] 
+**extended_prorate_cost** | **Float** |  | [optional] 
+**extended_prorate_price** | **Float** |  | [optional] 
+**prorate_current_period_flag** | **BOOLEAN** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

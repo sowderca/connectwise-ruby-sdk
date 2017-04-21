@@ -1,4 +1,4 @@
-# Connectwise::Project
+# ConnectWise::Project
 
 ## Properties
 Name | Type | Description | Notes

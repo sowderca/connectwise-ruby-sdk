@@ -1,4 +1,4 @@
-# Connectwise::CampaignSubTypeReference
+# ConnectWise::CampaignSubTypeReference
 
 ## Properties
 Name | Type | Description | Notes

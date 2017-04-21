@@ -1,4 +1,4 @@
-# Connectwise::GroupsApi
+# ConnectWise::GroupsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,22 +25,22 @@ Get Groups Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.marketing_groups_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_count_get: #{e}"
 end
 ```
@@ -78,17 +78,19 @@ Get Groups
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -96,7 +98,7 @@ opts = {
 begin
   result = api_instance.marketing_groups_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_get: #{e}"
 end
 ```
@@ -107,6 +109,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -137,20 +141,20 @@ Delete Group By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.marketing_groups_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_id_delete: #{e}"
 end
 ```
@@ -188,13 +192,13 @@ Get Group By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
 id = 56 # Integer | 
 
@@ -202,7 +206,7 @@ id = 56 # Integer |
 begin
   result = api_instance.marketing_groups_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_id_get: #{e}"
 end
 ```
@@ -240,23 +244,23 @@ Update Group
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.marketing_groups_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_id_patch: #{e}"
 end
 ```
@@ -295,23 +299,23 @@ Replace Group
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
 id = 56 # Integer | 
 
-group = Connectwise::Group.new # Group | 
+group = ConnectWise::Group.new # Group | 
 
 
 begin
   result = api_instance.marketing_groups_id_put(id, group)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_id_put: #{e}"
 end
 ```
@@ -350,21 +354,21 @@ Create Group
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::GroupsApi.new
+api_instance = ConnectWise::GroupsApi.new
 
-group = Connectwise::Group.new # Group | 
+group = ConnectWise::Group.new # Group | 
 
 
 begin
   result = api_instance.marketing_groups_post(group)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling GroupsApi->marketing_groups_post: #{e}"
 end
 ```

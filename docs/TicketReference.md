@@ -1,4 +1,4 @@
-# Connectwise::TicketReference
+# ConnectWise::TicketReference
 
 ## Properties
 Name | Type | Description | Notes

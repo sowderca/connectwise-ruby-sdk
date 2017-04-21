@@ -1,4 +1,4 @@
-# Connectwise::AgreementWorkTypeExclusion
+# ConnectWise::AgreementWorkTypeExclusion
 
 ## Properties
 Name | Type | Description | Notes

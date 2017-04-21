@@ -1,4 +1,4 @@
-# Connectwise::SicCodeReference
+# ConnectWise::SicCodeReference
 
 ## Properties
 Name | Type | Description | Notes

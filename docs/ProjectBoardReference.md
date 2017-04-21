@@ -1,4 +1,4 @@
-# Connectwise::ProjectBoardReference
+# ConnectWise::ProjectBoardReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::ScheduleStatusReference
+# ConnectWise::ScheduleStatusReference
 
 ## Properties
 Name | Type | Description | Notes

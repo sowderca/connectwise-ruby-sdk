@@ -1,4 +1,4 @@
-# Connectwise::ClassificationReference
+# ConnectWise::ClassificationReference
 
 ## Properties
 Name | Type | Description | Notes

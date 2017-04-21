@@ -1,4 +1,4 @@
-# Connectwise::Ticket
+# ConnectWise::Ticket
 
 ## Properties
 Name | Type | Description | Notes
@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **zip** | **String** |  | [optional] 
 **country** | [**CountryReference**](CountryReference.md) |  | [optional] 
 **contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
+**contact_name** | **String** |  | [optional] 
 **contact_phone_number** | **String** |  | [optional] 
 **contact_phone_extension** | **String** |  | [optional] 
 **contact_email_address** | **String** |  | [optional] 
@@ -48,9 +49,9 @@ Name | Type | Description | Notes
 **automatic_email_resource_flag** | **BOOLEAN** |  | [optional] 
 **automatic_email_cc_flag** | **BOOLEAN** |  | [optional] 
 **automatic_email_cc** | **String** |  | [optional] 
-**initial_description** | **String** |  | [optional] 
-**initial_internal_analysis** | **String** |  | [optional] 
-**initial_resolution** | **String** |  | [optional] 
+**initial_description** | **String** | Only available for POST, will not be returned in the response | [optional] 
+**initial_internal_analysis** | **String** | Only available for POST, will not be returned in the response | [optional] 
+**initial_resolution** | **String** | Only available for POST, will not be returned in the response | [optional] 
 **contact_email_lookup** | **String** |  | [optional] 
 **process_notifications** | **BOOLEAN** | Can be set to false to skip notification processing when adding or updating a ticket (Defaults to True) | [optional] 
 **skip_callback** | **BOOLEAN** |  | [optional] 

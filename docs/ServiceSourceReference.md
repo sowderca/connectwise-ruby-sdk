@@ -1,4 +1,4 @@
-# Connectwise::ServiceSourceReference
+# ConnectWise::ServiceSourceReference
 
 ## Properties
 Name | Type | Description | Notes

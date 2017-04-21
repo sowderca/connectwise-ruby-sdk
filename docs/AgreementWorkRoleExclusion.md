@@ -1,4 +1,4 @@
-# Connectwise::AgreementWorkRoleExclusion
+# ConnectWise::AgreementWorkRoleExclusion
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::InvoiceReference
+# ConnectWise::InvoiceReference
 
 ## Properties
 Name | Type | Description | Notes

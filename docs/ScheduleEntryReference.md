@@ -1,4 +1,4 @@
-# Connectwise::ScheduleEntryReference
+# ConnectWise::ScheduleEntryReference
 
 ## Properties
 Name | Type | Description | Notes

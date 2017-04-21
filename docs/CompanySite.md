@@ -1,4 +1,4 @@
-# Connectwise::CompanySite
+# ConnectWise::CompanySite
 
 ## Properties
 Name | Type | Description | Notes

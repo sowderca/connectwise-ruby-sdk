@@ -1,4 +1,4 @@
-# Connectwise::ExpenseTypeReference
+# ConnectWise::ExpenseTypeReference
 
 ## Properties
 Name | Type | Description | Notes

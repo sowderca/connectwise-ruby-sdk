@@ -1,4 +1,4 @@
-# Connectwise::MarketingContact
+# ConnectWise::MarketingContact
 
 ## Properties
 Name | Type | Description | Notes

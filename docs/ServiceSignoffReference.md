@@ -1,4 +1,4 @@
-# Connectwise::ServiceSignoffReference
+# ConnectWise::ServiceSignoffReference
 
 ## Properties
 Name | Type | Description | Notes

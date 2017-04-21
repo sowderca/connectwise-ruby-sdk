@@ -1,4 +1,4 @@
-# Connectwise::ExpenseTaxTypeReference
+# ConnectWise::ExpenseTaxTypeReference
 
 ## Properties
 Name | Type | Description | Notes

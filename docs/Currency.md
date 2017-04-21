@@ -1,4 +1,4 @@
-# Connectwise::Currency
+# ConnectWise::Currency
 
 ## Properties
 Name | Type | Description | Notes

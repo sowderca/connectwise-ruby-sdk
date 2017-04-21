@@ -1,4 +1,4 @@
-# Connectwise::PricingBreaksApi
+# ConnectWise::PricingBreaksApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Delete Pricing Break By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ break_id = 56 # Integer |
 
 begin
   api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_delete(sched_id, detail_id, break_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_delete: #{e}"
 end
 ```
@@ -82,13 +82,13 @@ Get Pricing Break By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
@@ -100,7 +100,7 @@ break_id = 56 # Integer |
 begin
   result = api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_get(sched_id, detail_id, break_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_get: #{e}"
 end
 ```
@@ -140,13 +140,13 @@ Update Pricing Break
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
@@ -154,13 +154,13 @@ detail_id = 56 # Integer |
 
 break_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_patch(sched_id, detail_id, break_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_patch: #{e}"
 end
 ```
@@ -201,13 +201,13 @@ Replace Pricing Break
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
@@ -215,13 +215,13 @@ detail_id = 56 # Integer |
 
 break_id = 56 # Integer | 
 
-pricing_break = Connectwise::PricingBreak.new # PricingBreak | 
+pricing_break = ConnectWise::PricingBreak.new # PricingBreak | 
 
 
 begin
   result = api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_put(sched_id, detail_id, break_id, pricing_break)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_break_id_put: #{e}"
 end
 ```
@@ -262,26 +262,26 @@ Get Pricing Break Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
 detail_id = 56 # Integer | 
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_count_get(sched_id, detail_id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_count_get: #{e}"
 end
 ```
@@ -321,21 +321,23 @@ Get Pricing Break
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
 detail_id = 56 # Integer | 
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -343,7 +345,7 @@ opts = {
 begin
   result = api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_get(sched_id, detail_id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_get: #{e}"
 end
 ```
@@ -356,6 +358,8 @@ Name | Type | Description  | Notes
  **detail_id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -386,25 +390,25 @@ Create Pricing Break
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingBreaksApi.new
+api_instance = ConnectWise::PricingBreaksApi.new
 
 sched_id = 56 # Integer | 
 
 detail_id = 56 # Integer | 
 
-pricing_break = Connectwise::PricingBreak.new # PricingBreak | 
+pricing_break = ConnectWise::PricingBreak.new # PricingBreak | 
 
 
 begin
   result = api_instance.procurement_pricingschedules_sched_id_details_detail_id_breaks_post(sched_id, detail_id, pricing_break)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingBreaksApi->procurement_pricingschedules_sched_id_details_detail_id_breaks_post: #{e}"
 end
 ```

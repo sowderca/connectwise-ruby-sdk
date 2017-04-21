@@ -1,4 +1,4 @@
-# Connectwise::ReportDataResponse
+# ConnectWise::ReportDataResponse
 
 ## Properties
 Name | Type | Description | Notes

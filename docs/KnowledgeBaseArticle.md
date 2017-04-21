@@ -1,4 +1,4 @@
-# Connectwise::KnowledgeBaseArticle
+# ConnectWise::KnowledgeBaseArticle
 
 ## Properties
 Name | Type | Description | Notes

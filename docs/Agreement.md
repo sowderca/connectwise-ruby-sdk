@@ -1,4 +1,4 @@
-# Connectwise::Agreement
+# ConnectWise::Agreement
 
 ## Properties
 Name | Type | Description | Notes

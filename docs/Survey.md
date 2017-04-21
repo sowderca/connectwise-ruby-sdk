@@ -1,4 +1,4 @@
-# Connectwise::Survey
+# ConnectWise::Survey
 
 ## Properties
 Name | Type | Description | Notes

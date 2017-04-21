@@ -1,4 +1,4 @@
-# Connectwise::BatchReference
+# ConnectWise::BatchReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::BillingStatusReference
+# ConnectWise::BillingStatusReference
 
 ## Properties
 Name | Type | Description | Notes

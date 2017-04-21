@@ -1,4 +1,4 @@
-# Connectwise::Report
+# ConnectWise::Report
 
 ## Properties
 Name | Type | Description | Notes

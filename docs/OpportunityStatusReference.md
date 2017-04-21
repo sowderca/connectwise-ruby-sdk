@@ -1,4 +1,4 @@
-# Connectwise::OpportunityStatusReference
+# ConnectWise::OpportunityStatusReference
 
 ## Properties
 Name | Type | Description | Notes

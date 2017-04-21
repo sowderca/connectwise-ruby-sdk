@@ -1,4 +1,4 @@
-# Connectwise::ContactRelationship
+# ConnectWise::ContactRelationship
 
 ## Properties
 Name | Type | Description | Notes

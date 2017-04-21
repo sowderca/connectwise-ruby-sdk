@@ -1,4 +1,4 @@
-# Connectwise::IvItemReference
+# ConnectWise::IvItemReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::Configuration
+# ConnectWise::Configuration
 
 ## Properties
 Name | Type | Description | Notes
@@ -52,6 +52,7 @@ Name | Type | Description | Notes
 **sla** | [**SLAReference**](SLAReference.md) |  | [optional] 
 **mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+**display_vendor_flag** | **BOOLEAN** |  | [optional] 
 **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 
 

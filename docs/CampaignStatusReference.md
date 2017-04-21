@@ -1,4 +1,4 @@
-# Connectwise::CampaignStatusReference
+# ConnectWise::CampaignStatusReference
 
 ## Properties
 Name | Type | Description | Notes

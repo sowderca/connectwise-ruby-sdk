@@ -1,4 +1,4 @@
-# Connectwise::Metadata
+# ConnectWise::Metadata
 
 ## Properties
 Name | Type | Description | Notes

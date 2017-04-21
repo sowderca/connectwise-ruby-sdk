@@ -1,4 +1,4 @@
-# Connectwise::Order
+# ConnectWise::Order
 
 ## Properties
 Name | Type | Description | Notes

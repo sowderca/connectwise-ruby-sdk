@@ -1,4 +1,4 @@
-# Connectwise::Opportunity
+# ConnectWise::Opportunity
 
 ## Properties
 Name | Type | Description | Notes
@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **bill_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
 **bill_to_contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
 **bill_to_site** | [**SiteReference**](SiteReference.md) |  | [optional] 
+**billing_terms** | [**BillingTermsReference**](BillingTermsReference.md) |  | [optional] 
+**tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 

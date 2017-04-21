@@ -1,4 +1,4 @@
-# Connectwise::Location
+# ConnectWise::Location
 
 ## Properties
 Name | Type | Description | Notes

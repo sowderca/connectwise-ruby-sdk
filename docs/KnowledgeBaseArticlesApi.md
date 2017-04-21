@@ -1,4 +1,4 @@
-# Connectwise::KnowledgeBaseArticlesApi
+# ConnectWise::KnowledgeBaseArticlesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,22 +25,23 @@ Get Knowledge Base Articles Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
+  custom_field_conditions: "custom_field_conditions_example" # String | 
 }
 
 begin
   result = api_instance.service_knowledge_base_articles_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_count_get: #{e}"
 end
 ```
@@ -50,6 +51,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
+ **custom_field_conditions** | **String**|  | [optional] 
 
 ### Return type
 
@@ -78,17 +80,19 @@ Get Knowledge Base Articles
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -96,7 +100,7 @@ opts = {
 begin
   result = api_instance.service_knowledge_base_articles_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_get: #{e}"
 end
 ```
@@ -107,6 +111,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -137,20 +143,20 @@ Delete Knowledge Base Article By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.service_knowledge_base_articles_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_id_delete: #{e}"
 end
 ```
@@ -188,13 +194,13 @@ Get Knowledge Base Article By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
 id = 56 # Integer | 
 
@@ -202,7 +208,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_knowledge_base_articles_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_id_get: #{e}"
 end
 ```
@@ -240,23 +246,23 @@ Update Knowledge Base Article
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_knowledge_base_articles_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_id_patch: #{e}"
 end
 ```
@@ -295,23 +301,23 @@ Replace Knowledge Base Article
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
 id = 56 # Integer | 
 
-knowledge_base_article = Connectwise::KnowledgeBaseArticle.new # KnowledgeBaseArticle | 
+knowledge_base_article = ConnectWise::KnowledgeBaseArticle.new # KnowledgeBaseArticle | 
 
 
 begin
   result = api_instance.service_knowledge_base_articles_id_put(id, knowledge_base_article)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_id_put: #{e}"
 end
 ```
@@ -350,21 +356,21 @@ Create Knowledge Base Article
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::KnowledgeBaseArticlesApi.new
+api_instance = ConnectWise::KnowledgeBaseArticlesApi.new
 
-knowledge_base_article = Connectwise::KnowledgeBaseArticle.new # KnowledgeBaseArticle | 
+knowledge_base_article = ConnectWise::KnowledgeBaseArticle.new # KnowledgeBaseArticle | 
 
 
 begin
   result = api_instance.service_knowledge_base_articles_post(knowledge_base_article)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling KnowledgeBaseArticlesApi->service_knowledge_base_articles_post: #{e}"
 end
 ```

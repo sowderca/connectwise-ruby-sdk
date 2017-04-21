@@ -1,4 +1,4 @@
-# Connectwise::ProjectContact
+# ConnectWise::ProjectContact
 
 ## Properties
 Name | Type | Description | Notes

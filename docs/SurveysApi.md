@@ -1,4 +1,4 @@
-# Connectwise::SurveysApi
+# ConnectWise::SurveysApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,22 +25,22 @@ Get Surveys Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
 }
 
 begin
   result = api_instance.service_surveys_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_count_get: #{e}"
 end
 ```
@@ -78,17 +78,19 @@ Get Surveys
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
 opts = { 
-  conditions: "conditions_example" # String | 
+  conditions: "conditions_example", # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -96,7 +98,7 @@ opts = {
 begin
   result = api_instance.service_surveys_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_get: #{e}"
 end
 ```
@@ -107,6 +109,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -137,20 +141,20 @@ Delete Survey By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.service_surveys_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_id_delete: #{e}"
 end
 ```
@@ -188,13 +192,13 @@ Get Survey By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
 id = 56 # Integer | 
 
@@ -202,7 +206,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_surveys_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_id_get: #{e}"
 end
 ```
@@ -240,23 +244,23 @@ Update Survey
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_surveys_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_id_patch: #{e}"
 end
 ```
@@ -295,23 +299,23 @@ Replace Survey
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
 id = 56 # Integer | 
 
-survey = Connectwise::Survey.new # Survey | 
+survey = ConnectWise::Survey.new # Survey | 
 
 
 begin
   result = api_instance.service_surveys_id_put(id, survey)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_id_put: #{e}"
 end
 ```
@@ -350,21 +354,21 @@ Create Survey
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::SurveysApi.new
+api_instance = ConnectWise::SurveysApi.new
 
-survey = Connectwise::Survey.new # Survey | 
+survey = ConnectWise::Survey.new # Survey | 
 
 
 begin
   result = api_instance.service_surveys_post(survey)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling SurveysApi->service_surveys_post: #{e}"
 end
 ```
