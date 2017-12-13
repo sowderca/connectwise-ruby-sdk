@@ -1,4 +1,4 @@
-# Connectwise::Invoice
+# ConnectWise::Invoice
 
 ## Properties
 Name | Type | Description | Notes
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **date** | **DateTime** |  | [optional] 
 **restrict_downpayment_flag** | **BOOLEAN** |  | [optional] 
 **location_id** | **Integer** |  | [optional] 
-**department_id** | **Integer** |  | [optional] 
+**department_id** | **Integer** | departmentId is only required for special invoices | [optional] 
 **territory_id** | **Integer** |  | [optional] 
 **top_comment** | **String** |  | [optional] 
 **bottom_comment** | **String** |  | [optional] 
@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **internal_notes** | **String** |  | [optional] 
 **downpayment_previously_taxed_flag** | **BOOLEAN** |  | [optional] 
 **service_total** | **Float** |  | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 **due_date** | **DateTime** |  | [optional] 
 **expense_total** | **Float** |  | [optional] 
 **product_total** | **Float** |  | [optional] 
@@ -50,5 +51,6 @@ Name | Type | Description | Notes
 **credits** | **Float** |  | [optional] 
 **balance** | **Float** |  | [optional] 
 **special_invoice_flag** | **BOOLEAN** |  | [optional] 
+**_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

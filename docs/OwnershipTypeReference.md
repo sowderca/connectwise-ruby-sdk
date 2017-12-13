@@ -1,4 +1,4 @@
-# Connectwise::OwnershipTypeReference
+# ConnectWise::OwnershipTypeReference
 
 ## Properties
 Name | Type | Description | Notes

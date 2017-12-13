@@ -1,4 +1,4 @@
-# Connectwise::UnpostedProcurement
+# ConnectWise::UnpostedProcurement
 
 ## Properties
 Name | Type | Description | Notes

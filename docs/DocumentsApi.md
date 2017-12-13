@@ -1,4 +1,4 @@
-# Connectwise::DocumentsApi
+# ConnectWise::DocumentsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -26,13 +26,13 @@ Get Documents Info Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 opts = { 
   record_type: "record_type_example", # String | 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.system_documents_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_count_get: #{e}"
 end
 ```
@@ -81,13 +81,13 @@ Get Documents Info
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 opts = { 
   record_type: "record_type_example", # String | 
@@ -99,7 +99,7 @@ opts = {
 begin
   result = api_instance.system_documents_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_get: #{e}"
 end
 ```
@@ -140,20 +140,20 @@ Delete Document Info By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.system_documents_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_id_delete: #{e}"
 end
 ```
@@ -191,13 +191,13 @@ Download Document
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 id = 56 # Integer | 
 
@@ -207,7 +207,7 @@ opts = {
 
 begin
   api_instance.system_documents_id_download_get(id, opts)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_id_download_get: #{e}"
 end
 ```
@@ -246,13 +246,13 @@ Get Document Info By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 id = 56 # Integer | 
 
@@ -260,7 +260,7 @@ id = 56 # Integer |
 begin
   result = api_instance.system_documents_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_id_get: #{e}"
 end
 ```
@@ -298,13 +298,13 @@ Update Document By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 id = 56 # Integer | 
 
@@ -314,17 +314,19 @@ record_type = "record_type_example" # String | Entity type
 
 title = "title_example" # String | Document title
 
+url = "url_example" # String | Document url
+
 opts = { 
-  url: "//path/to/file", # String | Url of file to attach
-  file: File.open("/path/to/file.txt"), # File | File to upload
+  file: File.new("/path/to/file.txt"), # File | File to upload
   private_flag: true, # BOOLEAN | Indicates if document is private
-  read_only_flag: true # BOOLEAN | Indicates if document is readonly
+  read_only_flag: true, # BOOLEAN | Indicates if document is readonly
+  is_avatar: true # BOOLEAN | Indicates if document contains an avatar
 }
 
 begin
-  result = api_instance.system_documents_id_post(id, record_id, record_type, title, opts)
+  result = api_instance.system_documents_id_post(id, record_id, record_type, title, url, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_id_post: #{e}"
 end
 ```
@@ -337,10 +339,11 @@ Name | Type | Description  | Notes
  **record_id** | **Integer**| Entity id | 
  **record_type** | **String**| Entity type | 
  **title** | **String**| Document title | 
- **url** | **String**| Document url | [optional if file present]
- **file** | **File**| File to upload | [optional if url present] 
+ **url** | **String**| Document url | 
+ **file** | **File**| File to upload | [optional] 
  **private_flag** | **BOOLEAN**| Indicates if document is private | [optional] 
  **read_only_flag** | **BOOLEAN**| Indicates if document is readonly | [optional] 
+ **is_avatar** | **BOOLEAN**| Indicates if document contains an avatar | [optional] 
 
 ### Return type
 
@@ -358,7 +361,7 @@ Name | Type | Description  | Notes
 
 
 # **system_documents_post**
-> DocumentInfo system_documents_post(record_id, record_type, title, url, opts)
+> DocumentInfo system_documents_post(record_type, title, url, opts)
 
 
 
@@ -369,31 +372,32 @@ Insert Document
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
-
-record_id = 56 # Integer | Entity id
+api_instance = ConnectWise::DocumentsApi.new
 
 record_type = "record_type_example" # String | Entity type
 
 title = "title_example" # String | Document title
 
+url = "url_example" # String | Document url
+
 opts = { 
-  url: "//path/to/file", # String | Document url
-  file: File.open("/path/to/file.txt"), # File | File to upload
+  file: File.new("/path/to/file.txt"), # File | File to upload
+  record_id: 56, # Integer | Entity id
   private_flag: true, # BOOLEAN | Indicates if document is private
-  read_only_flag: true # BOOLEAN | Indicates if document is readonly
+  read_only_flag: true, # BOOLEAN | Indicates if document is readonly
+  is_avatar: true # BOOLEAN | Indicates if document contains an avatar
 }
 
 begin
-  result = api_instance.system_documents_post(record_id, record_type, title, opts)
+  result = api_instance.system_documents_post(record_type, title, url, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_post: #{e}"
 end
 ```
@@ -402,13 +406,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **record_id** | **Integer**| Entity id | 
  **record_type** | **String**| Entity type | 
  **title** | **String**| Document title | 
  **url** | **String**| Document url | 
  **file** | **File**| File to upload | [optional] 
+ **record_id** | **Integer**| Entity id | [optional] 
  **private_flag** | **BOOLEAN**| Indicates if document is private | [optional] 
  **read_only_flag** | **BOOLEAN**| Indicates if document is readonly | [optional] 
+ **is_avatar** | **BOOLEAN**| Indicates if document contains an avatar | [optional] 
 
 ### Return type
 
@@ -437,17 +442,17 @@ Get Upload Sample Page
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::DocumentsApi.new
+api_instance = ConnectWise::DocumentsApi.new
 
 begin
   api_instance.system_documents_uploadsample_get
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling DocumentsApi->system_documents_uploadsample_get: #{e}"
 end
 ```

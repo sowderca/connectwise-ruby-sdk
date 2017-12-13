@@ -1,4 +1,4 @@
-# Connectwise::ServiceNote
+# ConnectWise::ServiceNote
 
 ## Properties
 Name | Type | Description | Notes

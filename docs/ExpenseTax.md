@@ -1,4 +1,4 @@
-# Connectwise::ExpenseTax
+# ConnectWise::ExpenseTax
 
 ## Properties
 Name | Type | Description | Notes

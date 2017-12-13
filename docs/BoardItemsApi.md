@@ -1,4 +1,4 @@
-# Connectwise::BoardItemsApi
+# ConnectWise::BoardItemsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Items Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_items_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_count_get: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_items_get**
-> Array&lt;Item&gt; service_boards_id_items_get(id, opts)
+> Array&lt;BoardItem&gt; service_boards_id_items_get(id, opts)
 
 
 
@@ -81,19 +81,21 @@ Get Items
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -101,7 +103,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_items_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_get: #{e}"
 end
 ```
@@ -113,12 +115,14 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Array&lt;Item&gt;**](Item.md)
+[**Array&lt;BoardItem&gt;**](BoardItem.md)
 
 ### Authorization
 
@@ -143,13 +147,13 @@ Delete Item By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
@@ -158,7 +162,7 @@ item_id = 56 # Integer |
 
 begin
   api_instance.service_boards_id_items_item_id_delete(id, item_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_item_id_delete: #{e}"
 end
 ```
@@ -186,7 +190,7 @@ nil (empty response body)
 
 
 # **service_boards_id_items_item_id_get**
-> Item service_boards_id_items_item_id_get(id, item_id)
+> BoardItem service_boards_id_items_item_id_get(id, item_id)
 
 
 
@@ -197,13 +201,13 @@ Get Item By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
@@ -213,7 +217,7 @@ item_id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_items_item_id_get(id, item_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_item_id_get: #{e}"
 end
 ```
@@ -227,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Item**](Item.md)
+[**BoardItem**](BoardItem.md)
 
 ### Authorization
 
@@ -241,7 +245,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_items_item_id_patch**
-> Item service_boards_id_items_item_id_patch(id, item_id, operations)
+> BoardItem service_boards_id_items_item_id_patch(id, item_id, operations)
 
 
 
@@ -252,25 +256,25 @@ Update Item
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
 item_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_boards_id_items_item_id_patch(id, item_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_item_id_patch: #{e}"
 end
 ```
@@ -285,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Item**](Item.md)
+[**BoardItem**](BoardItem.md)
 
 ### Authorization
 
@@ -299,7 +303,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_items_item_id_put**
-> Item service_boards_id_items_item_id_put(id, item_id, item)
+> BoardItem service_boards_id_items_item_id_put(id, item_id, board_item)
 
 
 
@@ -310,25 +314,25 @@ Replace Item
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
 item_id = 56 # Integer | 
 
-item = Connectwise::Item.new # Item | 
+board_item = ConnectWise::BoardItem.new # BoardItem | 
 
 
 begin
-  result = api_instance.service_boards_id_items_item_id_put(id, item_id, item)
+  result = api_instance.service_boards_id_items_item_id_put(id, item_id, board_item)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_item_id_put: #{e}"
 end
 ```
@@ -339,11 +343,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
  **item_id** | **Integer**|  | 
- **item** | [**Item**](Item.md)|  | 
+ **board_item** | [**BoardItem**](BoardItem.md)|  | 
 
 ### Return type
 
-[**Item**](Item.md)
+[**BoardItem**](BoardItem.md)
 
 ### Authorization
 
@@ -357,7 +361,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_items_post**
-> Item service_boards_id_items_post(id, item)
+> BoardItem service_boards_id_items_post(id, board_item)
 
 
 
@@ -368,23 +372,23 @@ Create Item
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardItemsApi.new
+api_instance = ConnectWise::BoardItemsApi.new
 
 id = 56 # Integer | 
 
-item = Connectwise::Item.new # Item | 
+board_item = ConnectWise::BoardItem.new # BoardItem | 
 
 
 begin
-  result = api_instance.service_boards_id_items_post(id, item)
+  result = api_instance.service_boards_id_items_post(id, board_item)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardItemsApi->service_boards_id_items_post: #{e}"
 end
 ```
@@ -394,11 +398,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
- **item** | [**Item**](Item.md)|  | 
+ **board_item** | [**BoardItem**](BoardItem.md)|  | 
 
 ### Return type
 
-[**Item**](Item.md)
+[**BoardItem**](BoardItem.md)
 
 ### Authorization
 

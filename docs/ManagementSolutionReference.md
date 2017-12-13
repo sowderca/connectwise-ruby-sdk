@@ -1,4 +1,4 @@
-# Connectwise::ManagementSolutionReference
+# ConnectWise::ManagementSolutionReference
 
 ## Properties
 Name | Type | Description | Notes

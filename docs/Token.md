@@ -1,4 +1,4 @@
-# Connectwise::Token
+# ConnectWise::Token
 
 ## Properties
 Name | Type | Description | Notes

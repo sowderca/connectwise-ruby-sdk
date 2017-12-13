@@ -1,4 +1,4 @@
-# Connectwise::SecurityRoleReference
+# ConnectWise::SecurityRoleReference
 
 ## Properties
 Name | Type | Description | Notes

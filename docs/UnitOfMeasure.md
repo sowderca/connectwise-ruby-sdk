@@ -1,4 +1,4 @@
-# Connectwise::UnitOfMeasure
+# ConnectWise::UnitOfMeasure
 
 ## Properties
 Name | Type | Description | Notes

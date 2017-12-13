@@ -1,4 +1,4 @@
-# Connectwise::ProjectPhaseReference
+# ConnectWise::ProjectPhaseReference
 
 ## Properties
 Name | Type | Description | Notes

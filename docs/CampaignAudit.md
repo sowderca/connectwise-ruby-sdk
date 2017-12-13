@@ -1,4 +1,4 @@
-# Connectwise::CampaignAudit
+# ConnectWise::CampaignAudit
 
 ## Properties
 Name | Type | Description | Notes

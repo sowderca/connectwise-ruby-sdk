@@ -1,4 +1,4 @@
-# Connectwise::OpportunityToSalesOrderConversion
+# ConnectWise::OpportunityToSalesOrderConversion
 
 ## Properties
 Name | Type | Description | Notes

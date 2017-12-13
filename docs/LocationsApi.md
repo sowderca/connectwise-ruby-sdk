@@ -1,47 +1,47 @@
-# Connectwise::LocationsApi
+# ConnectWise::LocationsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_locations_count_get**](LocationsApi.md#service_locations_count_get) | **GET** /service/locations/count | 
-[**service_locations_get**](LocationsApi.md#service_locations_get) | **GET** /service/locations | 
-[**service_locations_id_delete**](LocationsApi.md#service_locations_id_delete) | **DELETE** /service/locations/{id} | 
-[**service_locations_id_get**](LocationsApi.md#service_locations_id_get) | **GET** /service/locations/{id} | 
-[**service_locations_id_patch**](LocationsApi.md#service_locations_id_patch) | **PATCH** /service/locations/{id} | 
-[**service_locations_id_put**](LocationsApi.md#service_locations_id_put) | **PUT** /service/locations/{id} | 
-[**service_locations_post**](LocationsApi.md#service_locations_post) | **POST** /service/locations | 
+[**system_locations_count_get**](LocationsApi.md#system_locations_count_get) | **GET** /system/locations/count | 
+[**system_locations_get**](LocationsApi.md#system_locations_get) | **GET** /system/locations | 
+[**system_locations_id_delete**](LocationsApi.md#system_locations_id_delete) | **DELETE** /system/locations/{id} | 
+[**system_locations_id_get**](LocationsApi.md#system_locations_id_get) | **GET** /system/locations/{id} | 
+[**system_locations_id_patch**](LocationsApi.md#system_locations_id_patch) | **PATCH** /system/locations/{id} | 
+[**system_locations_id_put**](LocationsApi.md#system_locations_id_put) | **PUT** /system/locations/{id} | 
+[**system_locations_post**](LocationsApi.md#system_locations_post) | **POST** /system/locations | 
 
 
-# **service_locations_count_get**
-> Count service_locations_count_get(opts)
+# **system_locations_count_get**
+> Count system_locations_count_get(opts)
 
 
 
-Create Locations Count
+Get Location Count
 
 ### Example
 ```ruby
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
 opts = { 
   conditions: "conditions_example" # String | 
 }
 
 begin
-  result = api_instance.service_locations_count_get(opts)
+  result = api_instance.system_locations_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_count_get: #{e}"
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_count_get: #{e}"
 end
 ```
 
@@ -66,38 +66,40 @@ Name | Type | Description  | Notes
 
 
 
-# **service_locations_get**
-> Array&lt;Location&gt; service_locations_get(opts)
+# **system_locations_get**
+> Array&lt;Location&gt; system_locations_get(opts)
 
 
 
-Get Locations
+Get Location
 
 ### Example
 ```ruby
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
 
 begin
-  result = api_instance.service_locations_get(opts)
+  result = api_instance.system_locations_get(opts)
   p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_get: #{e}"
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_get: #{e}"
 end
 ```
 
@@ -107,6 +109,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -125,8 +129,8 @@ Name | Type | Description  | Notes
 
 
 
-# **service_locations_id_delete**
-> service_locations_id_delete(id)
+# **system_locations_id_delete**
+> system_locations_id_delete(id)
 
 
 
@@ -137,21 +141,21 @@ Delete Location By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
 id = 56 # Integer | 
 
 
 begin
-  api_instance.service_locations_id_delete(id)
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_id_delete: #{e}"
+  api_instance.system_locations_id_delete(id)
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_id_delete: #{e}"
 end
 ```
 
@@ -176,8 +180,8 @@ nil (empty response body)
 
 
 
-# **service_locations_id_get**
-> Location service_locations_id_get(id)
+# **system_locations_id_get**
+> Location system_locations_id_get(id)
 
 
 
@@ -188,22 +192,22 @@ Get Location By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
 id = 56 # Integer | 
 
 
 begin
-  result = api_instance.service_locations_id_get(id)
+  result = api_instance.system_locations_id_get(id)
   p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_id_get: #{e}"
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_id_get: #{e}"
 end
 ```
 
@@ -228,8 +232,8 @@ Name | Type | Description  | Notes
 
 
 
-# **service_locations_id_patch**
-> Location service_locations_id_patch(id, operations)
+# **system_locations_id_patch**
+> Location system_locations_id_patch(id, operations)
 
 
 
@@ -240,24 +244,24 @@ Update Location
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
-  result = api_instance.service_locations_id_patch(id, operations)
+  result = api_instance.system_locations_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_id_patch: #{e}"
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_id_patch: #{e}"
 end
 ```
 
@@ -283,8 +287,8 @@ Name | Type | Description  | Notes
 
 
 
-# **service_locations_id_put**
-> Location service_locations_id_put(id, location)
+# **system_locations_id_put**
+> Location system_locations_id_put(id, location)
 
 
 
@@ -295,24 +299,24 @@ Replace Location
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
 id = 56 # Integer | 
 
-location = Connectwise::Location.new # Location | 
+location = ConnectWise::Location.new # Location | 
 
 
 begin
-  result = api_instance.service_locations_id_put(id, location)
+  result = api_instance.system_locations_id_put(id, location)
   p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_id_put: #{e}"
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_id_put: #{e}"
 end
 ```
 
@@ -338,8 +342,8 @@ Name | Type | Description  | Notes
 
 
 
-# **service_locations_post**
-> Location service_locations_post(location)
+# **system_locations_post**
+> Location system_locations_post(location)
 
 
 
@@ -350,22 +354,22 @@ Create Location
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::LocationsApi.new
+api_instance = ConnectWise::LocationsApi.new
 
-location = Connectwise::Location.new # Location | 
+location = ConnectWise::Location.new # Location | 
 
 
 begin
-  result = api_instance.service_locations_post(location)
+  result = api_instance.system_locations_post(location)
   p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling LocationsApi->service_locations_post: #{e}"
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling LocationsApi->system_locations_post: #{e}"
 end
 ```
 

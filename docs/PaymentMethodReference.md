@@ -1,4 +1,4 @@
-# Connectwise::PaymentMethodReference
+# ConnectWise::PaymentMethodReference
 
 ## Properties
 Name | Type | Description | Notes

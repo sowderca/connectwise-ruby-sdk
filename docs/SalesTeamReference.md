@@ -1,4 +1,4 @@
-# Connectwise::SalesTeamReference
+# ConnectWise::SalesTeamReference
 
 ## Properties
 Name | Type | Description | Notes

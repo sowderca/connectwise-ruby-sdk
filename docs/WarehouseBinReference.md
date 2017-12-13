@@ -1,4 +1,4 @@
-# Connectwise::WarehouseBinReference
+# ConnectWise::WarehouseBinReference
 
 ## Properties
 Name | Type | Description | Notes

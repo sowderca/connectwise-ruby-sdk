@@ -1,4 +1,4 @@
-# Connectwise::WarehouseReference
+# ConnectWise::WarehouseReference
 
 ## Properties
 Name | Type | Description | Notes

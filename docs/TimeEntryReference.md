@@ -1,4 +1,4 @@
-# Connectwise::TimeEntryReference
+# ConnectWise::TimeEntryReference
 
 ## Properties
 Name | Type | Description | Notes

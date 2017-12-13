@@ -1,4 +1,4 @@
-# Connectwise::OpportunityStageReference
+# ConnectWise::OpportunityStageReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::PricingSchedule
+# ConnectWise::PricingSchedule
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **inactive_flag** | **BOOLEAN** |  | [optional] 
 **default_flag** | **BOOLEAN** |  | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 **companies** | **Array&lt;Integer&gt;** |  | [optional] 
 **set_all_companies_flag** | **BOOLEAN** |  | [optional] 
 **remove_all_companies_flag** | **BOOLEAN** |  | [optional] 

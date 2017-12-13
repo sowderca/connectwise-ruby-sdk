@@ -1,4 +1,4 @@
-# Connectwise::SLAReference
+# ConnectWise::SLAReference
 
 ## Properties
 Name | Type | Description | Notes

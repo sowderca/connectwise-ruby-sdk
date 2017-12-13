@@ -1,4 +1,4 @@
-# Connectwise::PricingDetail
+# ConnectWise::PricingDetail
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sub_category** | [**ProductSubCategoryReference**](ProductSubCategoryReference.md) |  | [optional] 
 **start_date** | **DateTime** |  | 
 **end_date** | **DateTime** |  | [optional] 
+**no_end_date** | **BOOLEAN** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

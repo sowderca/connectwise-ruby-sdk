@@ -1,4 +1,4 @@
-# Connectwise::Contact
+# ConnectWise::Contact
 
 ## Properties
 Name | Type | Description | Notes
@@ -40,6 +40,8 @@ Name | Type | Description | Notes
 **facebook_url** | **String** |  | [optional] 
 **twitter_url** | **String** |  | [optional] 
 **linked_in_url** | **String** |  | [optional] 
+**default_billing_flag** | **BOOLEAN** |  | [optional] 
+**default_flag** | **BOOLEAN** |  | [optional] 
 **communication_items** | [**Array&lt;ContactCommunicationItem&gt;**](ContactCommunicationItem.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 

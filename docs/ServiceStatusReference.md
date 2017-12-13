@@ -1,4 +1,4 @@
-# Connectwise::ServiceStatusReference
+# ConnectWise::ServiceStatusReference
 
 ## Properties
 Name | Type | Description | Notes

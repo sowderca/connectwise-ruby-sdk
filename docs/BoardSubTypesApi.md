@@ -1,4 +1,4 @@
-# Connectwise::BoardSubTypesApi
+# ConnectWise::BoardSubTypesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Subtypes Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_subtypes_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_count_get: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_subtypes_get**
-> Array&lt;SubType&gt; service_boards_id_subtypes_get(id, opts)
+> Array&lt;BoardSubType&gt; service_boards_id_subtypes_get(id, opts)
 
 
 
@@ -81,19 +81,21 @@ Get Subtypes
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -101,7 +103,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_subtypes_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_get: #{e}"
 end
 ```
@@ -113,12 +115,14 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Array&lt;SubType&gt;**](SubType.md)
+[**Array&lt;BoardSubType&gt;**](BoardSubType.md)
 
 ### Authorization
 
@@ -132,7 +136,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_subtypes_post**
-> SubType service_boards_id_subtypes_post(id, sub_type)
+> BoardSubType service_boards_id_subtypes_post(id, board_sub_type)
 
 
 
@@ -143,23 +147,23 @@ Create Subtype
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
-sub_type = Connectwise::SubType.new # SubType | 
+board_sub_type = ConnectWise::BoardSubType.new # BoardSubType | 
 
 
 begin
-  result = api_instance.service_boards_id_subtypes_post(id, sub_type)
+  result = api_instance.service_boards_id_subtypes_post(id, board_sub_type)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_post: #{e}"
 end
 ```
@@ -169,11 +173,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
- **sub_type** | [**SubType**](SubType.md)|  | 
+ **board_sub_type** | [**BoardSubType**](BoardSubType.md)|  | 
 
 ### Return type
 
-[**SubType**](SubType.md)
+[**BoardSubType**](BoardSubType.md)
 
 ### Authorization
 
@@ -198,13 +202,13 @@ Delete Subtype By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
@@ -213,7 +217,7 @@ subtype_id = 56 # Integer |
 
 begin
   api_instance.service_boards_id_subtypes_subtype_id_delete(id, subtype_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_subtype_id_delete: #{e}"
 end
 ```
@@ -241,7 +245,7 @@ nil (empty response body)
 
 
 # **service_boards_id_subtypes_subtype_id_get**
-> SubType service_boards_id_subtypes_subtype_id_get(id, subtype_id)
+> BoardSubType service_boards_id_subtypes_subtype_id_get(id, subtype_id)
 
 
 
@@ -252,13 +256,13 @@ Get Subtype By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
@@ -268,7 +272,7 @@ subtype_id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_subtypes_subtype_id_get(id, subtype_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_subtype_id_get: #{e}"
 end
 ```
@@ -282,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SubType**](SubType.md)
+[**BoardSubType**](BoardSubType.md)
 
 ### Authorization
 
@@ -296,7 +300,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_subtypes_subtype_id_patch**
-> SubType service_boards_id_subtypes_subtype_id_patch(id, subtype_id, operations)
+> BoardSubType service_boards_id_subtypes_subtype_id_patch(id, subtype_id, operations)
 
 
 
@@ -307,25 +311,25 @@ Update Subtype
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
 subtype_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_boards_id_subtypes_subtype_id_patch(id, subtype_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_subtype_id_patch: #{e}"
 end
 ```
@@ -340,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SubType**](SubType.md)
+[**BoardSubType**](BoardSubType.md)
 
 ### Authorization
 
@@ -354,7 +358,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_subtypes_subtype_id_put**
-> SubType service_boards_id_subtypes_subtype_id_put(id, subtype_id, sub_type)
+> BoardSubType service_boards_id_subtypes_subtype_id_put(id, subtype_id, board_sub_type)
 
 
 
@@ -365,25 +369,25 @@ Replace Subtype
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardSubTypesApi.new
+api_instance = ConnectWise::BoardSubTypesApi.new
 
 id = 56 # Integer | 
 
 subtype_id = 56 # Integer | 
 
-sub_type = Connectwise::SubType.new # SubType | 
+board_sub_type = ConnectWise::BoardSubType.new # BoardSubType | 
 
 
 begin
-  result = api_instance.service_boards_id_subtypes_subtype_id_put(id, subtype_id, sub_type)
+  result = api_instance.service_boards_id_subtypes_subtype_id_put(id, subtype_id, board_sub_type)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardSubTypesApi->service_boards_id_subtypes_subtype_id_put: #{e}"
 end
 ```
@@ -394,11 +398,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
  **subtype_id** | **Integer**|  | 
- **sub_type** | [**SubType**](SubType.md)|  | 
+ **board_sub_type** | [**BoardSubType**](BoardSubType.md)|  | 
 
 ### Return type
 
-[**SubType**](SubType.md)
+[**BoardSubType**](BoardSubType.md)
 
 ### Authorization
 

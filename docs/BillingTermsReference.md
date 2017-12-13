@@ -1,4 +1,4 @@
-# Connectwise::BillingTermsReference
+# ConnectWise::BillingTermsReference
 
 ## Properties
 Name | Type | Description | Notes

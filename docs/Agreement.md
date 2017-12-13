@@ -1,4 +1,4 @@
-# Connectwise::Agreement
+# ConnectWise::Agreement
 
 ## Properties
 Name | Type | Description | Notes
@@ -57,6 +57,7 @@ Name | Type | Description | Notes
 **bill_start_date** | **DateTime** |  | [optional] 
 **tax_code_id** | **Integer** |  | [optional] 
 **restrict_down_payment** | **BOOLEAN** |  | [optional] 
+**prorate_flag** | **BOOLEAN** |  | [optional] 
 **invoice_description** | **String** |  | [optional] 
 **top_comment** | **BOOLEAN** |  | [optional] 
 **bottom_comment** | **BOOLEAN** |  | [optional] 
@@ -70,7 +71,8 @@ Name | Type | Description | Notes
 **billable_time_invoice** | **BOOLEAN** |  | [optional] 
 **billable_expense_invoice** | **BOOLEAN** |  | [optional] 
 **billable_product_invoice** | **BOOLEAN** |  | [optional] 
-**_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 **period_type** | **String** |  | [optional] 
+**_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

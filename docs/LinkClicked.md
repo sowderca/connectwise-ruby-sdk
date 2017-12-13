@@ -1,4 +1,4 @@
-# Connectwise::LinkClicked
+# ConnectWise::LinkClicked
 
 ## Properties
 Name | Type | Description | Notes

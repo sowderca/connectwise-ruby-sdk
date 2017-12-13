@@ -1,4 +1,4 @@
-# Connectwise::UnitOfMeasureConversionsApi
+# ConnectWise::UnitOfMeasureConversionsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Delete Conversion By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
@@ -40,7 +40,7 @@ conversion_id = 56 # Integer |
 
 begin
   api_instance.procurement_unit_of_measures_id_conversions_conversion_id_delete(id, conversion_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_conversion_id_delete: #{e}"
 end
 ```
@@ -79,13 +79,13 @@ Get Conversion By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
@@ -95,7 +95,7 @@ conversion_id = 56 # Integer |
 begin
   result = api_instance.procurement_unit_of_measures_id_conversions_conversion_id_get(id, conversion_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_conversion_id_get: #{e}"
 end
 ```
@@ -134,25 +134,25 @@ Update Conversion
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
 conversion_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.procurement_unit_of_measures_id_conversions_conversion_id_patch(id, conversion_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_conversion_id_patch: #{e}"
 end
 ```
@@ -192,25 +192,25 @@ Replace Conversion
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
 conversion_id = 56 # Integer | 
 
-conversion = Connectwise::Conversion.new # Conversion | 
+conversion = ConnectWise::Conversion.new # Conversion | 
 
 
 begin
   result = api_instance.procurement_unit_of_measures_id_conversions_conversion_id_put(id, conversion_id, conversion)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_conversion_id_put: #{e}"
 end
 ```
@@ -250,13 +250,13 @@ Get Conversion Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
@@ -267,7 +267,7 @@ opts = {
 begin
   result = api_instance.procurement_unit_of_measures_id_conversions_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_count_get: #{e}"
 end
 ```
@@ -306,19 +306,21 @@ Get Conversion
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -326,7 +328,7 @@ opts = {
 begin
   result = api_instance.procurement_unit_of_measures_id_conversions_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_get: #{e}"
 end
 ```
@@ -338,6 +340,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -368,23 +372,23 @@ Create Conversion
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::UnitOfMeasureConversionsApi.new
+api_instance = ConnectWise::UnitOfMeasureConversionsApi.new
 
 id = 56 # Integer | 
 
-conversion = Connectwise::Conversion.new # Conversion | 
+conversion = ConnectWise::Conversion.new # Conversion | 
 
 
 begin
   result = api_instance.procurement_unit_of_measures_id_conversions_post(id, conversion)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling UnitOfMeasureConversionsApi->procurement_unit_of_measures_id_conversions_post: #{e}"
 end
 ```

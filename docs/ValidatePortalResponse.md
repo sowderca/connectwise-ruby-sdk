@@ -1,4 +1,4 @@
-# Connectwise::ValidatePortalResponse
+# ConnectWise::ValidatePortalResponse
 
 ## Properties
 Name | Type | Description | Notes

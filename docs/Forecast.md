@@ -1,4 +1,4 @@
-# Connectwise::Forecast
+# ConnectWise::Forecast
 
 ## Properties
 Name | Type | Description | Notes
@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **percent** | **Float** |  | [optional] 
 **margin** | **Float** |  | [optional] 
 **opportunity_id** | **Integer** |  | [optional] 
+**quote_number** | **String** |  | [optional] 
+**quote_name** | **String** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

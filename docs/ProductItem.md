@@ -1,4 +1,4 @@
-# Connectwise::ProductItem
+# ConnectWise::ProductItem
 
 ## Properties
 Name | Type | Description | Notes
@@ -45,7 +45,9 @@ Name | Type | Description | Notes
 **list_price** | **Float** |  | [optional] 
 **serial_number_ids** | **Array&lt;Integer&gt;** |  | [optional] 
 **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
+**forecast_status** | [**OpportunityStatusReference**](OpportunityStatusReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 **bypass_forecast_update** | **BOOLEAN** |  | [optional] 
+**custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 
 

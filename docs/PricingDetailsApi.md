@@ -1,4 +1,4 @@
-# Connectwise::PricingDetailsApi
+# ConnectWise::PricingDetailsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Pricing Detail Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.procurement_pricingschedules_id_details_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_count_get: #{e}"
 end
 ```
@@ -81,13 +81,13 @@ Delete Pricing Detail By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
@@ -96,7 +96,7 @@ detail_id = 56 # Integer |
 
 begin
   api_instance.procurement_pricingschedules_id_details_detail_id_delete(id, detail_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_detail_id_delete: #{e}"
 end
 ```
@@ -135,13 +135,13 @@ Get Pricing Detail By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
@@ -151,7 +151,7 @@ detail_id = 56 # Integer |
 begin
   result = api_instance.procurement_pricingschedules_id_details_detail_id_get(id, detail_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_detail_id_get: #{e}"
 end
 ```
@@ -190,25 +190,25 @@ Update Pricing Detail
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
 detail_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.procurement_pricingschedules_id_details_detail_id_patch(id, detail_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_detail_id_patch: #{e}"
 end
 ```
@@ -248,25 +248,25 @@ Replace Pricing Detail
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
 detail_id = 56 # Integer | 
 
-pricing_detail = Connectwise::PricingDetail.new # PricingDetail | 
+pricing_detail = ConnectWise::PricingDetail.new # PricingDetail | 
 
 
 begin
   result = api_instance.procurement_pricingschedules_id_details_detail_id_put(id, detail_id, pricing_detail)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_detail_id_put: #{e}"
 end
 ```
@@ -306,19 +306,21 @@ Get Pricing Detail
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -326,7 +328,7 @@ opts = {
 begin
   result = api_instance.procurement_pricingschedules_id_details_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_get: #{e}"
 end
 ```
@@ -338,6 +340,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -368,23 +372,23 @@ Create Pricing Detail
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::PricingDetailsApi.new
+api_instance = ConnectWise::PricingDetailsApi.new
 
 id = 56 # Integer | 
 
-pricing_detail = Connectwise::PricingDetail.new # PricingDetail | 
+pricing_detail = ConnectWise::PricingDetail.new # PricingDetail | 
 
 
 begin
   result = api_instance.procurement_pricingschedules_id_details_post(id, pricing_detail)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling PricingDetailsApi->procurement_pricingschedules_id_details_post: #{e}"
 end
 ```

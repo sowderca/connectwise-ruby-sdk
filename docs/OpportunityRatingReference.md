@@ -1,4 +1,4 @@
-# Connectwise::OpportunityRatingReference
+# ConnectWise::OpportunityRatingReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::CompanyTeamsApi
+# ConnectWise::CompanyTeamsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Company Teams Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.company_companies_id_teams_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_count_get: #{e}"
 end
 ```
@@ -81,19 +81,21 @@ Get Company Teams
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -101,7 +103,7 @@ opts = {
 begin
   result = api_instance.company_companies_id_teams_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_get: #{e}"
 end
 ```
@@ -113,6 +115,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -143,23 +147,23 @@ Create Company Team
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
-company_team = Connectwise::CompanyTeam.new # CompanyTeam | 
+company_team = ConnectWise::CompanyTeam.new # CompanyTeam | 
 
 
 begin
   result = api_instance.company_companies_id_teams_post(id, company_team)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_post: #{e}"
 end
 ```
@@ -198,13 +202,13 @@ Delete Company Team By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
@@ -213,7 +217,7 @@ team_id = 56 # Integer |
 
 begin
   api_instance.company_companies_id_teams_team_id_delete(id, team_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_team_id_delete: #{e}"
 end
 ```
@@ -252,13 +256,13 @@ Get Company Team By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
@@ -268,7 +272,7 @@ team_id = 56 # Integer |
 begin
   result = api_instance.company_companies_id_teams_team_id_get(id, team_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_team_id_get: #{e}"
 end
 ```
@@ -307,25 +311,25 @@ Update Company Team
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
 team_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.company_companies_id_teams_team_id_patch(id, team_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_team_id_patch: #{e}"
 end
 ```
@@ -365,25 +369,25 @@ Replace Company Team
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::CompanyTeamsApi.new
+api_instance = ConnectWise::CompanyTeamsApi.new
 
 id = 56 # Integer | 
 
 team_id = 56 # Integer | 
 
-company_team = Connectwise::CompanyTeam.new # CompanyTeam | 
+company_team = ConnectWise::CompanyTeam.new # CompanyTeam | 
 
 
 begin
   result = api_instance.company_companies_id_teams_team_id_put(id, team_id, company_team)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling CompanyTeamsApi->company_companies_id_teams_team_id_put: #{e}"
 end
 ```

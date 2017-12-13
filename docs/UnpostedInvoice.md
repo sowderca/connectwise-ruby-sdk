@@ -1,4 +1,4 @@
-# Connectwise::UnpostedInvoice
+# ConnectWise::UnpostedInvoice
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::CalendarReference
+# ConnectWise::CalendarReference
 
 ## Properties
 Name | Type | Description | Notes

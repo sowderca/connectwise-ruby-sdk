@@ -1,9 +1,10 @@
-# Connectwise::BoardsApi
+# ConnectWise::BoardsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**service_boards_copy_post**](BoardsApi.md#service_boards_copy_post) | **POST** /service/boards/copy | 
 [**service_boards_count_get**](BoardsApi.md#service_boards_count_get) | **GET** /service/boards/count | 
 [**service_boards_get**](BoardsApi.md#service_boards_get) | **GET** /service/boards | 
 [**service_boards_id_delete**](BoardsApi.md#service_boards_id_delete) | **DELETE** /service/boards/{id} | 
@@ -11,6 +12,58 @@ Method | HTTP request | Description
 [**service_boards_id_patch**](BoardsApi.md#service_boards_id_patch) | **PATCH** /service/boards/{id} | 
 [**service_boards_id_put**](BoardsApi.md#service_boards_id_put) | **PUT** /service/boards/{id} | 
 [**service_boards_post**](BoardsApi.md#service_boards_post) | **POST** /service/boards | 
+
+
+# **service_boards_copy_post**
+> Board service_boards_copy_post(copy)
+
+
+
+Copy Board
+
+### Example
+```ruby
+# load the gem
+require 'connectwise-ruby-sdk'
+# setup authorization
+ConnectWise.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = ConnectWise::BoardsApi.new
+
+copy = ConnectWise::BoardCopy.new # BoardCopy | 
+
+
+begin
+  result = api_instance.service_boards_copy_post(copy)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling BoardsApi->service_boards_copy_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **copy** | [**BoardCopy**](BoardCopy.md)|  | 
+
+### Return type
+
+[**Board**](Board.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 
 
 # **service_boards_count_get**
@@ -25,13 +78,13 @@ Get Boards Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
 opts = { 
   conditions: "conditions_example" # String | 
@@ -40,7 +93,7 @@ opts = {
 begin
   result = api_instance.service_boards_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_count_get: #{e}"
 end
 ```
@@ -78,17 +131,19 @@ Get Boards
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -96,7 +151,7 @@ opts = {
 begin
   result = api_instance.service_boards_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_get: #{e}"
 end
 ```
@@ -107,6 +162,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -137,20 +194,20 @@ Delete Board By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.service_boards_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_id_delete: #{e}"
 end
 ```
@@ -188,13 +245,13 @@ Get Board By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
 id = 56 # Integer | 
 
@@ -202,7 +259,7 @@ id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_id_get: #{e}"
 end
 ```
@@ -240,23 +297,23 @@ Update Board
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_boards_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_id_patch: #{e}"
 end
 ```
@@ -295,23 +352,23 @@ Replace Board
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
 id = 56 # Integer | 
 
-board = Connectwise::Board.new # Board | 
+board = ConnectWise::Board.new # Board | 
 
 
 begin
   result = api_instance.service_boards_id_put(id, board)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_id_put: #{e}"
 end
 ```
@@ -350,21 +407,21 @@ Create Board
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardsApi.new
+api_instance = ConnectWise::BoardsApi.new
 
-board = Connectwise::Board.new # Board | 
+board = ConnectWise::Board.new # Board | 
 
 
 begin
   result = api_instance.service_boards_post(board)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardsApi->service_boards_post: #{e}"
 end
 ```

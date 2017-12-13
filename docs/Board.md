@@ -1,21 +1,63 @@
-# Connectwise::Board
+# ConnectWise::Board
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
 **name** | **String** |  | 
-**location_id** | **Integer** |  | 
-**business_unit_id** | **Integer** |  | 
-**inactive** | **BOOLEAN** |  | [optional] 
+**location** | [**SystemLocationReference**](SystemLocationReference.md) |  | 
+**department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | 
+**inactive_flag** | **BOOLEAN** |  | [optional] 
 **sign_off_template** | [**ServiceSignoffReference**](ServiceSignoffReference.md) |  | [optional] 
-**send_to_contact** | **BOOLEAN** |  | [optional] 
-**contact_template_id** | **Integer** |  | [optional] 
-**send_to_resource** | **BOOLEAN** |  | [optional] 
-**resource_template_id** | **Integer** |  | [optional] 
+**send_to_contact_flag** | **BOOLEAN** |  | [optional] 
+**contact_template** | [**ServiceEmailTemplateReference**](ServiceEmailTemplateReference.md) |  | [optional] 
+**send_to_resource_flag** | **BOOLEAN** |  | [optional] 
+**resource_template** | [**ServiceEmailTemplateReference**](ServiceEmailTemplateReference.md) |  | [optional] 
 **project_flag** | **BOOLEAN** |  | [optional] 
 **show_dependencies_flag** | **BOOLEAN** | This field only shows if it is Project Board. | [optional] 
 **show_estimates_flag** | **BOOLEAN** | This field only shows if it is Project Board. | [optional] 
+**board_icon** | [**DocumentReference**](DocumentReference.md) |  | [optional] 
+**bill_tickets_after_closed_flag** | **BOOLEAN** |  | [optional] 
+**bill_ticket_separately_flag** | **BOOLEAN** |  | [optional] 
+**bill_unapproved_time_expense_flag** | **BOOLEAN** |  | [optional] 
+**override_billing_setup_flag** | **BOOLEAN** |  | [optional] 
+**dispatch_member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**service_manager_member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**duty_manager_member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**oncall_member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  | [optional] 
+**work_type** | [**WorkTypeReference**](WorkTypeReference.md) |  | [optional] 
+**bill_time** | **String** |  | [optional] 
+**bill_expense** | **String** |  | [optional] 
+**bill_product** | **String** |  | [optional] 
+**auto_close_status** | [**ServiceStatusReference**](ServiceStatusReference.md) |  | [optional] 
+**auto_assign_new_tickets_flag** | **BOOLEAN** |  | [optional] 
+**auto_assign_new_ec_tickets_flag** | **BOOLEAN** |  | [optional] 
+**auto_assign_new_portal_tickets_flag** | **BOOLEAN** |  | [optional] 
+**discussions_locked_flag** | **BOOLEAN** |  | [optional] 
+**time_entry_locked_flag** | **BOOLEAN** |  | [optional] 
+**notify_email_from** | **String** |  | [optional] 
+**notify_email_from_name** | **String** |  | [optional] 
+**closed_loop_discussions_flag** | **BOOLEAN** |  | [optional] 
+**closed_loop_resolution_flag** | **BOOLEAN** |  | [optional] 
+**closed_loop_internal_analysis_flag** | **BOOLEAN** |  | [optional] 
+**time_entry_discussion_flag** | **BOOLEAN** |  | [optional] 
+**time_entry_resolution_flag** | **BOOLEAN** |  | [optional] 
+**time_entry_internal_analysis_flag** | **BOOLEAN** |  | [optional] 
+**problem_sort** | **String** |  | [optional] 
+**resolution_sort** | **String** |  | [optional] 
+**internal_analysis_sort** | **String** |  | [optional] 
+**email_connector_allow_reopen_closed_flag** | **BOOLEAN** |  | [optional] 
+**email_connector_reopen_status** | [**ServiceStatusReference**](ServiceStatusReference.md) | This field is only required when emailConnectorAllowReopenClosed is true | [optional] 
+**email_connector_reopen_resources_flag** | **BOOLEAN** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] 
+**email_connector_new_ticket_no_match_flag** | **BOOLEAN** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] 
+**email_connector_never_reopen_by_days_flag** | **BOOLEAN** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] 
+**email_connector_reopen_days_limit** | **Integer** |  | [optional] 
+**use_member_display_name_flag** | **BOOLEAN** |  | [optional] 
+**send_to_cc_flag** | **BOOLEAN** |  | [optional] 
+**auto_assign_ticket_owner_flag** | **BOOLEAN** |  | [optional] 
+**closed_loop_all_flag** | **BOOLEAN** |  | [optional] 
+**all_sort** | **String** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

@@ -1,4 +1,4 @@
-# Connectwise::ProjectRoleReference
+# ConnectWise::ProjectRoleReference
 
 ## Properties
 Name | Type | Description | Notes

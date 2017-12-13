@@ -1,4 +1,4 @@
-# Connectwise::ScheduleSpanReference
+# ConnectWise::ScheduleSpanReference
 
 ## Properties
 Name | Type | Description | Notes

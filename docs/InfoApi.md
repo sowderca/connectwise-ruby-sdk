@@ -1,4 +1,4 @@
-# Connectwise::InfoApi
+# ConnectWise::InfoApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -19,18 +19,18 @@ Get Infos
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InfoApi.new
+api_instance = ConnectWise::InfoApi.new
 
 begin
   result = api_instance.system_info_get
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InfoApi->system_info_get: #{e}"
 end
 ```

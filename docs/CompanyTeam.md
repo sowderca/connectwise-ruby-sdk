@@ -1,4 +1,4 @@
-# Connectwise::CompanyTeam
+# ConnectWise::CompanyTeam
 
 ## Properties
 Name | Type | Description | Notes
@@ -14,5 +14,8 @@ Name | Type | Description | Notes
 **tech_flag** | **BOOLEAN** |  | [optional] 
 **sales_flag** | **BOOLEAN** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+**count** | **Integer** |  | [optional] 
+**re_assign_to_member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**re_assign_to_contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
 
 

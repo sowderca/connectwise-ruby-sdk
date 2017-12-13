@@ -1,4 +1,4 @@
-# Connectwise::RelationshipReference
+# ConnectWise::RelationshipReference
 
 ## Properties
 Name | Type | Description | Notes

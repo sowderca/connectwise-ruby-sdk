@@ -1,10 +1,11 @@
-# Connectwise::TimeEntriesApi
+# ConnectWise::TimeEntriesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**time_entries_count_get**](TimeEntriesApi.md#time_entries_count_get) | **GET** /time/entries/count | 
+[**time_entries_defaults_post**](TimeEntriesApi.md#time_entries_defaults_post) | **POST** /time/entries/defaults | 
 [**time_entries_get**](TimeEntriesApi.md#time_entries_get) | **GET** /time/entries | 
 [**time_entries_id_delete**](TimeEntriesApi.md#time_entries_id_delete) | **DELETE** /time/entries/{id} | 
 [**time_entries_id_get**](TimeEntriesApi.md#time_entries_id_get) | **GET** /time/entries/{id} | 
@@ -25,22 +26,23 @@ Get Time Entries Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
 opts = { 
   conditions: "conditions_example" # String | 
+  custom_field_conditions: "custom_field_conditions_example" # String | 
 }
 
 begin
   result = api_instance.time_entries_count_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_count_get: #{e}"
 end
 ```
@@ -50,6 +52,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
+ **custom_field_conditions** | **String**|  | [optional] 
 
 ### Return type
 
@@ -66,6 +69,58 @@ Name | Type | Description  | Notes
 
 
 
+# **time_entries_defaults_post**
+> TimeEntry time_entries_defaults_post(time_entry)
+
+
+
+Get Time Entry Defaults
+
+### Example
+```ruby
+# load the gem
+require 'connectwise-ruby-sdk'
+# setup authorization
+ConnectWise.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = ConnectWise::TimeEntriesApi.new
+
+time_entry = ConnectWise::TimeEntry.new # TimeEntry | 
+
+
+begin
+  result = api_instance.time_entries_defaults_post(time_entry)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Exception when calling TimeEntriesApi->time_entries_defaults_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **time_entry** | [**TimeEntry**](TimeEntry.md)|  | 
+
+### Return type
+
+[**TimeEntry**](TimeEntry.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **time_entries_get**
 > Array&lt;TimeEntry&gt; time_entries_get(opts)
 
@@ -78,17 +133,19 @@ Get Time Entries
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -96,7 +153,7 @@ opts = {
 begin
   result = api_instance.time_entries_get(opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_get: #{e}"
 end
 ```
@@ -107,6 +164,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -137,20 +196,20 @@ Delete Time Entry By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
 id = 56 # Integer | 
 
 
 begin
   api_instance.time_entries_id_delete(id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_id_delete: #{e}"
 end
 ```
@@ -188,13 +247,13 @@ Get Time Entry By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
 id = 56 # Integer | 
 
@@ -202,7 +261,7 @@ id = 56 # Integer |
 begin
   result = api_instance.time_entries_id_get(id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_id_get: #{e}"
 end
 ```
@@ -240,23 +299,23 @@ Update Time Entry
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
 id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.time_entries_id_patch(id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_id_patch: #{e}"
 end
 ```
@@ -295,23 +354,23 @@ Replace Time Entry
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
 id = 56 # Integer | 
 
-time_entry = Connectwise::TimeEntry.new # TimeEntry | 
+time_entry = ConnectWise::TimeEntry.new # TimeEntry | 
 
 
 begin
   result = api_instance.time_entries_id_put(id, time_entry)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_id_put: #{e}"
 end
 ```
@@ -350,21 +409,21 @@ Create Time Entry
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::TimeEntriesApi.new
+api_instance = ConnectWise::TimeEntriesApi.new
 
-time_entry = Connectwise::TimeEntry.new # TimeEntry | 
+time_entry = ConnectWise::TimeEntry.new # TimeEntry | 
 
 
 begin
   result = api_instance.time_entries_post(time_entry)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling TimeEntriesApi->time_entries_post: #{e}"
 end
 ```

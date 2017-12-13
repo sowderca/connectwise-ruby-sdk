@@ -1,4 +1,4 @@
-# Connectwise::MarketingCompany
+# ConnectWise::MarketingCompany
 
 ## Properties
 Name | Type | Description | Notes

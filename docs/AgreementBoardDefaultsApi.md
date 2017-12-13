@@ -1,4 +1,4 @@
-# Connectwise::AgreementBoardDefaultsApi
+# ConnectWise::AgreementBoardDefaultsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Delete Board Default By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
@@ -40,7 +40,7 @@ board_default_id = 56 # Integer |
 
 begin
   api_instance.finance_agreements_id_board_defaults_board_default_id_delete(id, board_default_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_board_default_id_delete: #{e}"
 end
 ```
@@ -79,13 +79,13 @@ Get Board Default By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
@@ -95,7 +95,7 @@ board_default_id = 56 # Integer |
 begin
   result = api_instance.finance_agreements_id_board_defaults_board_default_id_get(id, board_default_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_board_default_id_get: #{e}"
 end
 ```
@@ -134,25 +134,25 @@ Update Board Default
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
 board_default_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.finance_agreements_id_board_defaults_board_default_id_patch(id, board_default_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_board_default_id_patch: #{e}"
 end
 ```
@@ -192,25 +192,25 @@ Replace Board Default
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
 board_default_id = 56 # Integer | 
 
-board_default = Connectwise::BoardDefault.new # BoardDefault | 
+board_default = ConnectWise::BoardDefault.new # BoardDefault | 
 
 
 begin
   result = api_instance.finance_agreements_id_board_defaults_board_default_id_put(id, board_default_id, board_default)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_board_default_id_put: #{e}"
 end
 ```
@@ -250,13 +250,13 @@ Get Board Defaults Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
@@ -267,7 +267,7 @@ opts = {
 begin
   result = api_instance.finance_agreements_id_board_defaults_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_count_get: #{e}"
 end
 ```
@@ -306,19 +306,21 @@ Get Board Defaults
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -326,7 +328,7 @@ opts = {
 begin
   result = api_instance.finance_agreements_id_board_defaults_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_get: #{e}"
 end
 ```
@@ -338,6 +340,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -368,23 +372,23 @@ Create Board Default
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementBoardDefaultsApi.new
+api_instance = ConnectWise::AgreementBoardDefaultsApi.new
 
 id = 56 # Integer | 
 
-board_default = Connectwise::BoardDefault.new # BoardDefault | 
+board_default = ConnectWise::BoardDefault.new # BoardDefault | 
 
 
 begin
   result = api_instance.finance_agreements_id_board_defaults_post(id, board_default)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementBoardDefaultsApi->finance_agreements_id_board_defaults_post: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# Connectwise::SuccessResponse
+# ConnectWise::SuccessResponse
 
 ## Properties
 Name | Type | Description | Notes

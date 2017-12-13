@@ -1,4 +1,4 @@
-# Connectwise::OpportunityToServiceTicketConversion
+# ConnectWise::OpportunityToServiceTicketConversion
 
 ## Properties
 Name | Type | Description | Notes

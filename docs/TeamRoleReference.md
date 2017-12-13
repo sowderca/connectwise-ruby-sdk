@@ -1,4 +1,4 @@
-# Connectwise::TeamRoleReference
+# ConnectWise::TeamRoleReference
 
 ## Properties
 Name | Type | Description | Notes

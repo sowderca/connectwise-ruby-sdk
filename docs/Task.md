@@ -1,4 +1,4 @@
-# Connectwise::Task
+# ConnectWise::Task
 
 ## Properties
 Name | Type | Description | Notes

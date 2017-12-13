@@ -1,4 +1,4 @@
-# Connectwise::Activity
+# ConnectWise::Activity
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
 **phone_number** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
-**status** | [**ActivityStatusReference**](ActivityStatusReference.md) |  | 
+**status** | [**ActivityStatusReference**](ActivityStatusReference.md) |  | [optional] 
 **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] 
 **ticket** | [**TicketReference**](TicketReference.md) |  | [optional] 
 **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] 
@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **reminder** | [**ReminderReference**](ReminderReference.md) |  | [optional] 
 **where** | [**ServiceLocationReference**](ServiceLocationReference.md) |  | [optional] 
 **notify_flag** | **BOOLEAN** |  | [optional] 
+**mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 

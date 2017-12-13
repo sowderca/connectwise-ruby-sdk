@@ -1,19 +1,22 @@
-# Connectwise::IntegratorLogin
+# ConnectWise::IntegratorLogin
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
 **username** | **String** |  | 
-**password** | **String** | The password field can only be set on initial POST to create a new integrator login. | 
+**password** | **String** | The password will never be returned in response | 
 **can_access_all_records_flag** | **BOOLEAN** | This flag controls whether the integrator can access only the db records it created, or all system records | [optional] 
 **can_access_all_apis_flag** | **BOOLEAN** |  | [optional] 
+**inactive_flag** | **BOOLEAN** |  | [optional] 
+**date_inactivated** | **DateTime** |  | [optional] 
+**inactivated_by** | [**MemberReference**](MemberReference.md) |  | [optional] 
 **service_ticket_api_flag** | **BOOLEAN** |  | [optional] 
-**board** | [**BoardReference**](BoardReference.md) |  | [optional] 
+**board** | [**BoardReference**](BoardReference.md) | If integrator has access to ServiceTicket API, a service board is required | [optional] 
 **service_board_callback_url** | **String** |  | [optional] 
 **service_board_legacy_callback_flag** | **BOOLEAN** |  | [optional] 
 **time_entry_api_flag** | **BOOLEAN** |  | [optional] 
-**member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**member** | [**MemberReference**](MemberReference.md) | If integrator has access to TimeEntry API, a member is required | [optional] 
 **time_entry_callback_url** | **String** |  | [optional] 
 **time_entry_legacy_callback_flag** | **BOOLEAN** |  | [optional] 
 **managed_services_api_flag** | **BOOLEAN** |  | [optional] 

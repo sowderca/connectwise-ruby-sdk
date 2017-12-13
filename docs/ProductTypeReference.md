@@ -1,4 +1,4 @@
-# Connectwise::ProductTypeReference
+# ConnectWise::ProductTypeReference
 
 ## Properties
 Name | Type | Description | Notes

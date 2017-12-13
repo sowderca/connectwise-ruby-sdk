@@ -1,4 +1,4 @@
-# Connectwise::Conversion
+# ConnectWise::Conversion
 
 ## Properties
 Name | Type | Description | Notes

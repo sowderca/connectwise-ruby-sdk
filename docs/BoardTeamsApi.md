@@ -1,4 +1,4 @@
-# Connectwise::BoardTeamsApi
+# ConnectWise::BoardTeamsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Teams Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_teams_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_count_get: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_teams_get**
-> Array&lt;Team&gt; service_boards_id_teams_get(id, opts)
+> Array&lt;BoardTeam&gt; service_boards_id_teams_get(id, opts)
 
 
 
@@ -81,19 +81,21 @@ Get Teams
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -101,7 +103,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_teams_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_get: #{e}"
 end
 ```
@@ -113,12 +115,14 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Array&lt;Team&gt;**](Team.md)
+[**Array&lt;BoardTeam&gt;**](BoardTeam.md)
 
 ### Authorization
 
@@ -132,7 +136,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_teams_post**
-> Team service_boards_id_teams_post(id, team)
+> BoardTeam service_boards_id_teams_post(id, _board_team)
 
 
 
@@ -143,23 +147,23 @@ Create Team
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
-team = Connectwise::Team.new # Team | 
+_board_team = ConnectWise::BoardTeam.new # BoardTeam | 
 
 
 begin
-  result = api_instance.service_boards_id_teams_post(id, team)
+  result = api_instance.service_boards_id_teams_post(id, _board_team)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_post: #{e}"
 end
 ```
@@ -169,11 +173,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
- **team** | [**Team**](Team.md)|  | 
+ **_board_team** | [**BoardTeam**](BoardTeam.md)|  | 
 
 ### Return type
 
-[**Team**](Team.md)
+[**BoardTeam**](BoardTeam.md)
 
 ### Authorization
 
@@ -198,13 +202,13 @@ Delete Team By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
@@ -213,7 +217,7 @@ team_id = 56 # Integer |
 
 begin
   api_instance.service_boards_id_teams_team_id_delete(id, team_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_team_id_delete: #{e}"
 end
 ```
@@ -241,7 +245,7 @@ nil (empty response body)
 
 
 # **service_boards_id_teams_team_id_get**
-> Team service_boards_id_teams_team_id_get(id, team_id)
+> BoardTeam service_boards_id_teams_team_id_get(id, team_id)
 
 
 
@@ -252,13 +256,13 @@ Get Team By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
@@ -268,7 +272,7 @@ team_id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_teams_team_id_get(id, team_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_team_id_get: #{e}"
 end
 ```
@@ -282,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Team**](Team.md)
+[**BoardTeam**](BoardTeam.md)
 
 ### Authorization
 
@@ -296,7 +300,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_teams_team_id_patch**
-> Team service_boards_id_teams_team_id_patch(id, team_id, operations)
+> BoardTeam service_boards_id_teams_team_id_patch(id, team_id, operations)
 
 
 
@@ -307,25 +311,25 @@ Update Team
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
 team_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_boards_id_teams_team_id_patch(id, team_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_team_id_patch: #{e}"
 end
 ```
@@ -340,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Team**](Team.md)
+[**BoardTeam**](BoardTeam.md)
 
 ### Authorization
 
@@ -354,7 +358,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_teams_team_id_put**
-> Team service_boards_id_teams_team_id_put(id, team_id, team)
+> BoardTeam service_boards_id_teams_team_id_put(id, team_id, _board_team)
 
 
 
@@ -365,25 +369,25 @@ Replace Team
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTeamsApi.new
+api_instance = ConnectWise::BoardTeamsApi.new
 
 id = 56 # Integer | 
 
 team_id = 56 # Integer | 
 
-team = Connectwise::Team.new # Team | 
+_board_team = ConnectWise::BoardTeam.new # BoardTeam | 
 
 
 begin
-  result = api_instance.service_boards_id_teams_team_id_put(id, team_id, team)
+  result = api_instance.service_boards_id_teams_team_id_put(id, team_id, _board_team)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTeamsApi->service_boards_id_teams_team_id_put: #{e}"
 end
 ```
@@ -394,11 +398,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
  **team_id** | **Integer**|  | 
- **team** | [**Team**](Team.md)|  | 
+ **_board_team** | [**BoardTeam**](BoardTeam.md)|  | 
 
 ### Return type
 
-[**Team**](Team.md)
+[**BoardTeam**](BoardTeam.md)
 
 ### Authorization
 

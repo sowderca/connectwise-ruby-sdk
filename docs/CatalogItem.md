@@ -1,4 +1,4 @@
-# Connectwise::CatalogItem
+# ConnectWise::CatalogItem
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **inactive_flag** | **BOOLEAN** |  | [optional] 
 **subcategory** | [**ProductSubCategoryReference**](ProductSubCategoryReference.md) |  | 
 **type** | [**ProductTypeReference**](ProductTypeReference.md) |  | 
-**product_class** | **String** |  | 
+**product_class** | **String** | Defaults to Non-Inventory | [optional] 
 **serialized_flag** | **BOOLEAN** |  | [optional] 
 **serialized_cost_flag** | **BOOLEAN** |  | [optional] 
 **phase_product_flag** | **BOOLEAN** |  | [optional] 
@@ -29,5 +29,6 @@ Name | Type | Description | Notes
 **date_entered** | **String** |  | [optional] 
 **category** | [**ProductCategoryReference**](ProductCategoryReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
+**custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 
 

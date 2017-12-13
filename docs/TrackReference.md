@@ -1,4 +1,4 @@
-# Connectwise::TrackReference
+# ConnectWise::TrackReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::PhaseStatusReference
+# ConnectWise::PhaseStatusReference
 
 ## Properties
 Name | Type | Description | Notes

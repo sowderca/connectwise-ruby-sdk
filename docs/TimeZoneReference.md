@@ -1,4 +1,4 @@
-# Connectwise::TimeZoneReference
+# ConnectWise::TimeZoneReference
 
 ## Properties
 Name | Type | Description | Notes

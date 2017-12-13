@@ -1,8 +1,8 @@
-# Connectwise::RequestPasswordRequest
+# ConnectWise::RequestPasswordRequest
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **String** |  | [optional] 
+**email** | **String** |  | 
 
 

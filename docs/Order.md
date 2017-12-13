@@ -1,4 +1,4 @@
-# Connectwise::Order
+# ConnectWise::Order
 
 ## Properties
 Name | Type | Description | Notes
@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **config_ids** | **Array&lt;Integer&gt;** |  | [optional] 
 **total** | **Float** |  | [optional] 
 **tax_total** | **Float** |  | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

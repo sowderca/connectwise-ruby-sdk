@@ -1,4 +1,4 @@
-# Connectwise::SiteReference
+# ConnectWise::SiteReference
 
 ## Properties
 Name | Type | Description | Notes

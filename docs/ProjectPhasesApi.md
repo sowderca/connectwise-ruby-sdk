@@ -1,4 +1,4 @@
-# Connectwise::ProjectPhasesApi
+# ConnectWise::ProjectPhasesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Project Phases Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.project_projects_id_phases_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_count_get: #{e}"
 end
 ```
@@ -81,19 +81,21 @@ Get Project Phases
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -101,7 +103,7 @@ opts = {
 begin
   result = api_instance.project_projects_id_phases_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_get: #{e}"
 end
 ```
@@ -113,6 +115,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -143,13 +147,13 @@ Delete Project Phase By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
@@ -158,7 +162,7 @@ phase_id = 56 # Integer |
 
 begin
   api_instance.project_projects_id_phases_phase_id_delete(id, phase_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_phase_id_delete: #{e}"
 end
 ```
@@ -197,13 +201,13 @@ Get Project Phase By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
@@ -213,7 +217,7 @@ phase_id = 56 # Integer |
 begin
   result = api_instance.project_projects_id_phases_phase_id_get(id, phase_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_phase_id_get: #{e}"
 end
 ```
@@ -252,25 +256,25 @@ Update Project Phase
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
 phase_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.project_projects_id_phases_phase_id_patch(id, phase_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_phase_id_patch: #{e}"
 end
 ```
@@ -310,25 +314,25 @@ Replace Project Phase
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
 phase_id = 56 # Integer | 
 
-project_phase = Connectwise::ProjectPhase.new # ProjectPhase | 
+project_phase = ConnectWise::ProjectPhase.new # ProjectPhase | 
 
 
 begin
   result = api_instance.project_projects_id_phases_phase_id_put(id, phase_id, project_phase)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_phase_id_put: #{e}"
 end
 ```
@@ -368,23 +372,23 @@ Create Project Phase
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::ProjectPhasesApi.new
+api_instance = ConnectWise::ProjectPhasesApi.new
 
 id = 56 # Integer | 
 
-project_phase = Connectwise::ProjectPhase.new # ProjectPhase | 
+project_phase = ConnectWise::ProjectPhase.new # ProjectPhase | 
 
 
 begin
   result = api_instance.project_projects_id_phases_post(id, project_phase)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling ProjectPhasesApi->project_projects_id_phases_post: #{e}"
 end
 ```

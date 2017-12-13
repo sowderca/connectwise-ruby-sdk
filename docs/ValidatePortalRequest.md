@@ -1,9 +1,9 @@
-# Connectwise::ValidatePortalRequest
+# ConnectWise::ValidatePortalRequest
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **String** |  | [optional] 
-**password** | **String** |  | [optional] 
+**email** | **String** |  | 
+**password** | **String** |  | 
 
 

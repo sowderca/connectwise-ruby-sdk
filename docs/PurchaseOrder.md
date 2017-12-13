@@ -1,4 +1,4 @@
-# Connectwise::PurchaseOrder
+# ConnectWise::PurchaseOrder
 
 ## Properties
 Name | Type | Description | Notes
@@ -52,5 +52,6 @@ Name | Type | Description | Notes
 **vendor_order_number** | **String** |  | [optional] 
 **vendor_site** | [**SiteReference**](SiteReference.md) |  | [optional] 
 **warehouse** | [**WarehouseReference**](WarehouseReference.md) |  | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 
 

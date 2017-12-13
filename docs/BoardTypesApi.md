@@ -1,4 +1,4 @@
-# Connectwise::BoardTypesApi
+# ConnectWise::BoardTypesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**service_boards_id_types_type_id_get**](BoardTypesApi.md#service_boards_id_types_type_id_get) | **GET** /service/boards/{id}/types/{typeId} | 
 [**service_boards_id_types_type_id_patch**](BoardTypesApi.md#service_boards_id_types_type_id_patch) | **PATCH** /service/boards/{id}/types/{typeId} | 
 [**service_boards_id_types_type_id_put**](BoardTypesApi.md#service_boards_id_types_type_id_put) | **PUT** /service/boards/{id}/types/{typeId} | 
-[**service_boards_id_types_type_id_sub_type_association_get**](BoardTypesApi.md#service_boards_id_types_type_id_sub_type_association_get) | **GET** /service/boards/{id}/types/{typeId}/subTypeAssociation | 
 
 
 # **service_boards_id_types_count_get**
@@ -26,13 +25,13 @@ Get Types Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
@@ -43,7 +42,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_types_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_count_get: #{e}"
 end
 ```
@@ -71,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_types_get**
-> Array&lt;Type&gt; service_boards_id_types_get(id, opts)
+> Array&lt;BoardType&gt; service_boards_id_types_get(id, opts)
 
 
 
@@ -82,19 +81,21 @@ Get Types
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -102,7 +103,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_types_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_get: #{e}"
 end
 ```
@@ -114,12 +115,14 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Array&lt;Type&gt;**](Type.md)
+[**Array&lt;BoardType&gt;**](BoardType.md)
 
 ### Authorization
 
@@ -133,7 +136,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_types_post**
-> Type service_boards_id_types_post(id, type)
+> BoardType service_boards_id_types_post(id, board_type)
 
 
 
@@ -144,23 +147,23 @@ Create Type
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
-type = Connectwise::Type.new # Type | 
+board_type = ConnectWise::BoardType.new # BoardType | 
 
 
 begin
-  result = api_instance.service_boards_id_types_post(id, type)
+  result = api_instance.service_boards_id_types_post(id, board_type)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_post: #{e}"
 end
 ```
@@ -170,11 +173,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
- **type** | [**Type**](Type.md)|  | 
+ **board_type** | [**BoardType**](BoardType.md)|  | 
 
 ### Return type
 
-[**Type**](Type.md)
+[**BoardType**](BoardType.md)
 
 ### Authorization
 
@@ -199,13 +202,13 @@ Delete Type By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
@@ -214,7 +217,7 @@ type_id = 56 # Integer |
 
 begin
   api_instance.service_boards_id_types_type_id_delete(id, type_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_type_id_delete: #{e}"
 end
 ```
@@ -242,7 +245,7 @@ nil (empty response body)
 
 
 # **service_boards_id_types_type_id_get**
-> Type service_boards_id_types_type_id_get(id, type_id)
+> BoardType service_boards_id_types_type_id_get(id, type_id)
 
 
 
@@ -253,13 +256,13 @@ Get Type By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
@@ -269,7 +272,7 @@ type_id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_types_type_id_get(id, type_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_type_id_get: #{e}"
 end
 ```
@@ -283,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Type**](Type.md)
+[**BoardType**](BoardType.md)
 
 ### Authorization
 
@@ -297,7 +300,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_types_type_id_patch**
-> Type service_boards_id_types_type_id_patch(id, type_id, operations)
+> BoardType service_boards_id_types_type_id_patch(id, type_id, operations)
 
 
 
@@ -308,25 +311,25 @@ Update Types
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
 type_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_boards_id_types_type_id_patch(id, type_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_type_id_patch: #{e}"
 end
 ```
@@ -341,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Type**](Type.md)
+[**BoardType**](BoardType.md)
 
 ### Authorization
 
@@ -355,7 +358,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_types_type_id_put**
-> Type service_boards_id_types_type_id_put(id, type_id, type)
+> BoardType service_boards_id_types_type_id_put(id, type_id, board_type)
 
 
 
@@ -366,25 +369,25 @@ Replace Types
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardTypesApi.new
+api_instance = ConnectWise::BoardTypesApi.new
 
 id = 56 # Integer | 
 
 type_id = 56 # Integer | 
 
-type = Connectwise::Type.new # Type | 
+board_type = ConnectWise::BoardType.new # BoardType | 
 
 
 begin
-  result = api_instance.service_boards_id_types_type_id_put(id, type_id, type)
+  result = api_instance.service_boards_id_types_type_id_put(id, type_id, board_type)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardTypesApi->service_boards_id_types_type_id_put: #{e}"
 end
 ```
@@ -395,11 +398,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
  **type_id** | **Integer**|  | 
- **type** | [**Type**](Type.md)|  | 
+ **board_type** | [**BoardType**](BoardType.md)|  | 
 
 ### Return type
 
-[**Type**](Type.md)
+[**BoardType**](BoardType.md)
 
 ### Authorization
 
@@ -408,61 +411,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **service_boards_id_types_type_id_sub_type_association_get**
-> Integer service_boards_id_types_type_id_sub_type_association_get(id, type_id)
-
-
-
-Get Sub Type Association
-
-### Example
-```ruby
-# load the gem
-require 'connectwise-ruby-sdk'
-# setup authorization
-Connectwise.configure do |config|
-  # Configure HTTP basic authorization: BasicAuth
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = Connectwise::BoardTypesApi.new
-
-id = 56 # Integer | 
-
-type_id = 56 # Integer | 
-
-
-begin
-  result = api_instance.service_boards_id_types_type_id_sub_type_association_get(id, type_id)
-  p result
-rescue Connectwise::ApiError => e
-  puts "Exception when calling BoardTypesApi->service_boards_id_types_type_id_sub_type_association_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**|  | 
- **type_id** | **Integer**|  | 
-
-### Return type
-
-**Integer**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 

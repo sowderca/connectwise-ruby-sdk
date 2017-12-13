@@ -1,4 +1,4 @@
-# Connectwise::CompanySite
+# ConnectWise::CompanySite
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **state** | **String** |  | [optional] 
 **zip** | **String** |  | [optional] 
 **country** | [**CountryReference**](CountryReference.md) |  | [optional] 
+**address_format** | **String** |  | [optional] 
 **phone_number** | **String** |  | [optional] 
 **fax_number** | **String** |  | [optional] 
 **tax_code_id** | **Integer** |  | [optional] 
@@ -19,8 +20,9 @@ Name | Type | Description | Notes
 **default_shipping_flag** | **BOOLEAN** |  | [optional] 
 **default_billing_flag** | **BOOLEAN** |  | [optional] 
 **default_mailing_flag** | **BOOLEAN** |  | [optional] 
+**mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
 **calendar** | [**CalendarReference**](CalendarReference.md) |  | [optional] 
-**time_zone** | [**TimeZoneReference**](TimeZoneReference.md) |  | [optional] 
+**time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) |  | [optional] 
 **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 

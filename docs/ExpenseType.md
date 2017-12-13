@@ -1,4 +1,4 @@
-# Connectwise::ExpenseType
+# ConnectWise::ExpenseType
 
 ## Properties
 Name | Type | Description | Notes
@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **quantity_flag** | **BOOLEAN** |  | [optional] 
 **inactive_flag** | **BOOLEAN** |  | [optional] 
 **max_amount** | **Float** |  | [optional] 
+**external_integration_x_ref** | [**ExternalExpenseTypeIntegrationReference**](ExternalExpenseTypeIntegrationReference.md) |  | [optional] 
+**integration_x_ref** | **String** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

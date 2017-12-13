@@ -1,4 +1,4 @@
-# Connectwise::ReminderReference
+# ConnectWise::ReminderReference
 
 ## Properties
 Name | Type | Description | Notes

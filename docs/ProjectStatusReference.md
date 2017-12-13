@@ -1,4 +1,4 @@
-# Connectwise::ProjectStatusReference
+# ConnectWise::ProjectStatusReference
 
 ## Properties
 Name | Type | Description | Notes

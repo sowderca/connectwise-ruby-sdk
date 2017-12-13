@@ -1,4 +1,4 @@
-# Connectwise::ShipmentMethodReference
+# ConnectWise::ShipmentMethodReference
 
 ## Properties
 Name | Type | Description | Notes

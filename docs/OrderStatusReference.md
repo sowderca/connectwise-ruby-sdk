@@ -1,4 +1,4 @@
-# Connectwise::OrderStatusReference
+# ConnectWise::OrderStatusReference
 
 ## Properties
 Name | Type | Description | Notes

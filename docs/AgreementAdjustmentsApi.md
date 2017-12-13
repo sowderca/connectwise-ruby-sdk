@@ -1,4 +1,4 @@
-# Connectwise::AgreementAdjustmentsApi
+# ConnectWise::AgreementAdjustmentsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Delete Adjustment By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
@@ -40,7 +40,7 @@ adjustment_id = 56 # Integer |
 
 begin
   api_instance.finance_agreements_id_adjustments_adjustment_id_delete(id, adjustment_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_adjustment_id_delete: #{e}"
 end
 ```
@@ -79,13 +79,13 @@ Get Adjustment By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
@@ -95,7 +95,7 @@ adjustment_id = 56 # Integer |
 begin
   result = api_instance.finance_agreements_id_adjustments_adjustment_id_get(id, adjustment_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_adjustment_id_get: #{e}"
 end
 ```
@@ -134,25 +134,25 @@ Update Adjustment
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
 adjustment_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.finance_agreements_id_adjustments_adjustment_id_patch(id, adjustment_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_adjustment_id_patch: #{e}"
 end
 ```
@@ -192,25 +192,25 @@ Replace Adjustment
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
 adjustment_id = 56 # Integer | 
 
-adjustment = Connectwise::Adjustment.new # Adjustment | 
+adjustment = ConnectWise::Adjustment.new # Adjustment | 
 
 
 begin
   result = api_instance.finance_agreements_id_adjustments_adjustment_id_put(id, adjustment_id, adjustment)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_adjustment_id_put: #{e}"
 end
 ```
@@ -250,24 +250,25 @@ Get Adjustments Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
+  custom_field_conditions: "custom_field_conditions_example" # String | 
 }
 
 begin
   result = api_instance.finance_agreements_id_adjustments_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_count_get: #{e}"
 end
 ```
@@ -278,6 +279,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
+ **custom_field_conditions** | **String**|  | [optional] 
 
 ### Return type
 
@@ -306,19 +308,21 @@ Get Adjustments
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -326,7 +330,7 @@ opts = {
 begin
   result = api_instance.finance_agreements_id_adjustments_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_get: #{e}"
 end
 ```
@@ -338,6 +342,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -368,23 +374,23 @@ Create Adjustment
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::AgreementAdjustmentsApi.new
+api_instance = ConnectWise::AgreementAdjustmentsApi.new
 
 id = 56 # Integer | 
 
-adjustment = Connectwise::Adjustment.new # Adjustment | 
+adjustment = ConnectWise::Adjustment.new # Adjustment | 
 
 
 begin
   result = api_instance.finance_agreements_id_adjustments_post(id, adjustment)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling AgreementAdjustmentsApi->finance_agreements_id_adjustments_post: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# Connectwise::MemberTypeReference
+# ConnectWise::MemberTypeReference
 
 ## Properties
 Name | Type | Description | Notes

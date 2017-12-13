@@ -1,4 +1,4 @@
-# Connectwise::ProductComponent
+# ConnectWise::ProductComponent
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::Priority
+# ConnectWise::Priority
 
 ## Properties
 Name | Type | Description | Notes

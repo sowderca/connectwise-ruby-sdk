@@ -1,4 +1,4 @@
-# Connectwise::OpportunitySalesRoleReference
+# ConnectWise::OpportunitySalesRoleReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::MenuEntry
+# ConnectWise::MenuEntry
 
 ## Properties
 Name | Type | Description | Notes
@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **origin** | **String** |  | [optional] 
 **add_all_locations** | **BOOLEAN** |  | [optional] 
 **remove_all_locations** | **BOOLEAN** |  | [optional] 
+**small_menu_icon_id** | **Integer** |  | [optional] 
+**large_menu_icon_id** | **Integer** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

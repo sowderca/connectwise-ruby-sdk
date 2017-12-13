@@ -1,4 +1,4 @@
-# Connectwise::ContactNote
+# ConnectWise::ContactNote
 
 ## Properties
 Name | Type | Description | Notes

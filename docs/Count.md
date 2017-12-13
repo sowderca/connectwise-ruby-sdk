@@ -1,4 +1,4 @@
-# Connectwise::Count
+# ConnectWise::Count
 
 ## Properties
 Name | Type | Description | Notes

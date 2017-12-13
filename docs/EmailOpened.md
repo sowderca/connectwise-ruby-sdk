@@ -1,4 +1,4 @@
-# Connectwise::EmailOpened
+# ConnectWise::EmailOpened
 
 ## Properties
 Name | Type | Description | Notes

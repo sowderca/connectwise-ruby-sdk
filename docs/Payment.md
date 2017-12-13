@@ -1,4 +1,4 @@
-# Connectwise::Payment
+# ConnectWise::Payment
 
 ## Properties
 Name | Type | Description | Notes

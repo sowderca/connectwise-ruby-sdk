@@ -1,4 +1,4 @@
-# Connectwise::OpportunityToProjectConversion
+# ConnectWise::OpportunityToProjectConversion
 
 ## Properties
 Name | Type | Description | Notes

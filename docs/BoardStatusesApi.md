@@ -1,4 +1,4 @@
-# Connectwise::BoardStatusesApi
+# ConnectWise::BoardStatusesApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -25,13 +25,13 @@ Get Statuses Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
@@ -42,7 +42,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_statuses_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_count_get: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_statuses_get**
-> Array&lt;Status&gt; service_boards_id_statuses_get(id, opts)
+> Array&lt;BoardStatus&gt; service_boards_id_statuses_get(id, opts)
 
 
 
@@ -81,19 +81,21 @@ Get Statuses
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -101,7 +103,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_statuses_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_get: #{e}"
 end
 ```
@@ -113,12 +115,14 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Array&lt;Status&gt;**](Status.md)
+[**Array&lt;BoardStatus&gt;**](BoardStatus.md)
 
 ### Authorization
 
@@ -132,7 +136,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_statuses_post**
-> Status service_boards_id_statuses_post(id, status)
+> BoardStatus service_boards_id_statuses_post(id, board_status)
 
 
 
@@ -143,23 +147,23 @@ Create Statuses
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
-status = Connectwise::Status.new # Status | 
+board_status = ConnectWise::BoardStatus.new # BoardStatus | 
 
 
 begin
-  result = api_instance.service_boards_id_statuses_post(id, status)
+  result = api_instance.service_boards_id_statuses_post(id, board_status)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_post: #{e}"
 end
 ```
@@ -169,11 +173,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
- **status** | [**Status**](Status.md)|  | 
+ **board_status** | [**BoardStatus**](BoardStatus.md)|  | 
 
 ### Return type
 
-[**Status**](Status.md)
+[**BoardStatus**](BoardStatus.md)
 
 ### Authorization
 
@@ -198,13 +202,13 @@ Delete Status By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
@@ -213,7 +217,7 @@ status_id = 56 # Integer |
 
 begin
   api_instance.service_boards_id_statuses_status_id_delete(id, status_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_status_id_delete: #{e}"
 end
 ```
@@ -241,7 +245,7 @@ nil (empty response body)
 
 
 # **service_boards_id_statuses_status_id_get**
-> Status service_boards_id_statuses_status_id_get(id, status_id)
+> BoardStatus service_boards_id_statuses_status_id_get(id, status_id)
 
 
 
@@ -252,13 +256,13 @@ Get Status By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
@@ -268,7 +272,7 @@ status_id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_statuses_status_id_get(id, status_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_status_id_get: #{e}"
 end
 ```
@@ -282,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**BoardStatus**](BoardStatus.md)
 
 ### Authorization
 
@@ -296,7 +300,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_statuses_status_id_patch**
-> Status service_boards_id_statuses_status_id_patch(id, status_id, operations)
+> BoardStatus service_boards_id_statuses_status_id_patch(id, status_id, operations)
 
 
 
@@ -307,25 +311,25 @@ Update Status
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
 status_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.service_boards_id_statuses_status_id_patch(id, status_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_status_id_patch: #{e}"
 end
 ```
@@ -340,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**BoardStatus**](BoardStatus.md)
 
 ### Authorization
 
@@ -354,7 +358,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_statuses_status_id_put**
-> Status service_boards_id_statuses_status_id_put(id, status_id, status)
+> BoardStatus service_boards_id_statuses_status_id_put(id, status_id, board_status)
 
 
 
@@ -365,25 +369,25 @@ Replace Statuses
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardStatusesApi.new
+api_instance = ConnectWise::BoardStatusesApi.new
 
 id = 56 # Integer | 
 
 status_id = 56 # Integer | 
 
-status = Connectwise::Status.new # Status | 
+board_status = ConnectWise::BoardStatus.new # BoardStatus | 
 
 
 begin
-  result = api_instance.service_boards_id_statuses_status_id_put(id, status_id, status)
+  result = api_instance.service_boards_id_statuses_status_id_put(id, status_id, board_status)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardStatusesApi->service_boards_id_statuses_status_id_put: #{e}"
 end
 ```
@@ -394,11 +398,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
  **status_id** | **Integer**|  | 
- **status** | [**Status**](Status.md)|  | 
+ **board_status** | [**BoardStatus**](BoardStatus.md)|  | 
 
 ### Return type
 
-[**Status**](Status.md)
+[**BoardStatus**](BoardStatus.md)
 
 ### Authorization
 

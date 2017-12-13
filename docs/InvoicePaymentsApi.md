@@ -1,4 +1,4 @@
-# Connectwise::InvoicePaymentsApi
+# ConnectWise::InvoicePaymentsApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -24,19 +24,21 @@ Get Payments
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InvoicePaymentsApi.new
+api_instance = ConnectWise::InvoicePaymentsApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -44,7 +46,7 @@ opts = {
 begin
   result = api_instance.finance_invoices_id_payments_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->finance_invoices_id_payments_get: #{e}"
 end
 ```
@@ -56,6 +58,8 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
@@ -86,13 +90,13 @@ Delete Payment By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InvoicePaymentsApi.new
+api_instance = ConnectWise::InvoicePaymentsApi.new
 
 id = 56 # Integer | 
 
@@ -101,7 +105,7 @@ payment_id = 56 # Integer |
 
 begin
   api_instance.finance_invoices_id_payments_payment_id_delete(id, payment_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->finance_invoices_id_payments_payment_id_delete: #{e}"
 end
 ```
@@ -140,13 +144,13 @@ Get Payment By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InvoicePaymentsApi.new
+api_instance = ConnectWise::InvoicePaymentsApi.new
 
 id = 56 # Integer | 
 
@@ -156,7 +160,7 @@ payment_id = 56 # Integer |
 begin
   result = api_instance.finance_invoices_id_payments_payment_id_get(id, payment_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->finance_invoices_id_payments_payment_id_get: #{e}"
 end
 ```
@@ -195,25 +199,25 @@ Update Payment
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InvoicePaymentsApi.new
+api_instance = ConnectWise::InvoicePaymentsApi.new
 
 id = 56 # Integer | 
 
 payment_id = 56 # Integer | 
 
-operations = [Connectwise::PatchOperation.new] # Array<PatchOperation> | 
+operations = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | 
 
 
 begin
   result = api_instance.finance_invoices_id_payments_payment_id_patch(id, payment_id, operations)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->finance_invoices_id_payments_payment_id_patch: #{e}"
 end
 ```
@@ -253,25 +257,25 @@ Replace Payment
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InvoicePaymentsApi.new
+api_instance = ConnectWise::InvoicePaymentsApi.new
 
 id = 56 # Integer | 
 
 payment_id = 56 # Integer | 
 
-payment = Connectwise::Payment.new # Payment | 
+payment = ConnectWise::Payment.new # Payment | 
 
 
 begin
   result = api_instance.finance_invoices_id_payments_payment_id_put(id, payment_id, payment)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->finance_invoices_id_payments_payment_id_put: #{e}"
 end
 ```
@@ -311,23 +315,23 @@ Create Payment
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::InvoicePaymentsApi.new
+api_instance = ConnectWise::InvoicePaymentsApi.new
 
 id = 56 # Integer | 
 
-payment = Connectwise::Payment.new # Payment | 
+payment = ConnectWise::Payment.new # Payment | 
 
 
 begin
   result = api_instance.finance_invoices_id_payments_post(id, payment)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->finance_invoices_id_payments_post: #{e}"
 end
 ```

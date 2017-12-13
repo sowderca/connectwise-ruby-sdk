@@ -1,4 +1,4 @@
-# Connectwise::Company
+# ConnectWise::Company
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | [optional] 
 **identifier** | **String** |  | 
 **name** | **String** |  | 
-**status** | [**CompanyStatusReference**](CompanyStatusReference.md) |  | 
-**type** | [**CompanyTypeReference**](CompanyTypeReference.md) |  | 
-**address_line1** | **String** |  | 
-**address_line2** | **String** |  | [optional] 
-**city** | **String** |  | [optional] 
-**state** | **String** |  | [optional] 
-**zip** | **String** |  | [optional] 
-**country** | [**CountryReference**](CountryReference.md) |  | [optional] 
+**status** | [**CompanyStatusReference**](CompanyStatusReference.md) |  | [optional] 
+**type** | [**CompanyTypeReference**](CompanyTypeReference.md) |  | [optional] 
+**address_line1** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country | [optional] 
+**address_line2** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country | [optional] 
+**city** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country | [optional] 
+**state** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country | [optional] 
+**zip** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country | [optional] 
+**country** | [**CountryReference**](CountryReference.md) | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country | [optional] 
 **phone_number** | **String** |  | [optional] 
 **fax_number** | **String** |  | [optional] 
 **website** | **String** |  | [optional] 
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **annual_revenue** | **Float** |  | [optional] 
 **number_of_employees** | **Integer** |  | [optional] 
 **ownership_type** | [**OwnershipTypeReference**](OwnershipTypeReference.md) |  | [optional] 
-**time_zone** | [**TimeZoneReference**](TimeZoneReference.md) |  | [optional] 
+**time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) | The specified system time zone for the Company | [optional] 
 **lead_source** | **String** |  | [optional] 
 **lead_flag** | **BOOLEAN** |  | [optional] 
 **unsubscribe_flag** | **BOOLEAN** |  | [optional] 
@@ -42,11 +42,28 @@ Name | Type | Description | Notes
 **user_defined_field8** | **String** |  | [optional] 
 **user_defined_field9** | **String** |  | [optional] 
 **user_defined_field10** | **String** |  | [optional] 
+**vendor_identifier** | **String** |  | [optional] 
+**tax_identifier** | **String** |  | [optional] 
+**tax_code** | [**TaxCodeReference**](TaxCodeReference.md) | New companies will be created with the default tax code unless otherwise specified. | [optional] 
+**billing_terms** | [**BillingTermsReference**](BillingTermsReference.md) |  | [optional] 
+**invoice_template** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  | [optional] 
+**pricing_schedule** | [**PricingScheduleReference**](PricingScheduleReference.md) |  | [optional] 
+**company_entity_type** | [**EntityTypeReference**](EntityTypeReference.md) | Based on CompanyEntityType Report | [optional] 
+**bill_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
+**billing_site** | [**SiteReference**](SiteReference.md) |  | [optional] 
+**billing_contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
+**invoice_delivery_method** | [**BillingDeliveryReference**](BillingDeliveryReference.md) |  | [optional] 
+**invoice_to_email_address** | **String** |  | [optional] 
+**invoice_cc_email_address** | **String** |  | [optional] 
 **deleted_flag** | **BOOLEAN** |  | [optional] 
 **date_deleted** | **DateTime** |  | [optional] 
 **deleted_by** | **String** |  | [optional] 
 **mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
+**facebook_url** | **String** |  | [optional] 
+**twitter_url** | **String** |  | [optional] 
+**linked_in_url** | **String** |  | [optional] 
 **currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
+**territory_manager** | [**MemberReference**](MemberReference.md) |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] 
 

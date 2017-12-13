@@ -1,4 +1,4 @@
-# Connectwise::Campaign
+# ConnectWise::Campaign
 
 ## Properties
 Name | Type | Description | Notes

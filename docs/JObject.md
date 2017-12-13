@@ -1,4 +1,4 @@
-# Connectwise::JObject
+# ConnectWise::JObject
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::BoardExcludedMembersApi
+# ConnectWise::BoardExcludedMembersApi
 
 All URIs are relative to *https://api-na.myconnectwise.net/v4_6_release/apis/3.0*
 
@@ -23,13 +23,13 @@ Get Excluded Members Count
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardExcludedMembersApi.new
+api_instance = ConnectWise::BoardExcludedMembersApi.new
 
 id = 56 # Integer | 
 
@@ -40,7 +40,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_excluded_members_count_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardExcludedMembersApi->service_boards_id_excluded_members_count_get: #{e}"
 end
 ```
@@ -79,13 +79,13 @@ Delete Excluded Member By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardExcludedMembersApi.new
+api_instance = ConnectWise::BoardExcludedMembersApi.new
 
 id = 56 # Integer | 
 
@@ -94,7 +94,7 @@ excluded_member_id = 56 # Integer |
 
 begin
   api_instance.service_boards_id_excluded_members_excluded_member_id_delete(id, excluded_member_id)
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardExcludedMembersApi->service_boards_id_excluded_members_excluded_member_id_delete: #{e}"
 end
 ```
@@ -122,7 +122,7 @@ nil (empty response body)
 
 
 # **service_boards_id_excluded_members_excluded_member_id_get**
-> ExcludedMember service_boards_id_excluded_members_excluded_member_id_get(id, excluded_member_id)
+> BoardExcludedMember service_boards_id_excluded_members_excluded_member_id_get(id, excluded_member_id)
 
 
 
@@ -133,13 +133,13 @@ Get Excluded Member By Id
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardExcludedMembersApi.new
+api_instance = ConnectWise::BoardExcludedMembersApi.new
 
 id = 56 # Integer | 
 
@@ -149,7 +149,7 @@ excluded_member_id = 56 # Integer |
 begin
   result = api_instance.service_boards_id_excluded_members_excluded_member_id_get(id, excluded_member_id)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardExcludedMembersApi->service_boards_id_excluded_members_excluded_member_id_get: #{e}"
 end
 ```
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ExcludedMember**](ExcludedMember.md)
+[**BoardExcludedMember**](BoardExcludedMember.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_excluded_members_get**
-> Array&lt;ExcludedMember&gt; service_boards_id_excluded_members_get(id, opts)
+> Array&lt;BoardExcludedMember&gt; service_boards_id_excluded_members_get(id, opts)
 
 
 
@@ -188,19 +188,21 @@ Get Excluded Members
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardExcludedMembersApi.new
+api_instance = ConnectWise::BoardExcludedMembersApi.new
 
 id = 56 # Integer | 
 
 opts = { 
   conditions: "conditions_example" # String | 
   order_by: "order_by_example", # String | 
+  childconditions: "childconditions_example", # String | 
+  customfieldconditions: "customfieldconditions_example", # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
@@ -208,7 +210,7 @@ opts = {
 begin
   result = api_instance.service_boards_id_excluded_members_get(id, opts)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardExcludedMembersApi->service_boards_id_excluded_members_get: #{e}"
 end
 ```
@@ -220,12 +222,14 @@ Name | Type | Description  | Notes
  **id** | **Integer**|  | 
  **conditions** | **String**|  | [optional] 
  **order_by** | **String**|  | [optional] 
+ **childconditions** | **String**|  | [optional] 
+ **customfieldconditions** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Array&lt;ExcludedMember&gt;**](ExcludedMember.md)
+[**Array&lt;BoardExcludedMember&gt;**](BoardExcludedMember.md)
 
 ### Authorization
 
@@ -239,7 +243,7 @@ Name | Type | Description  | Notes
 
 
 # **service_boards_id_excluded_members_post**
-> ExcludedMember service_boards_id_excluded_members_post(id, excluded_member)
+> BoardExcludedMember service_boards_id_excluded_members_post(id, board_excluded_member)
 
 
 
@@ -250,23 +254,23 @@ Create Excluded Member
 # load the gem
 require 'connectwise-ruby-sdk'
 # setup authorization
-Connectwise.configure do |config|
+ConnectWise.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = Connectwise::BoardExcludedMembersApi.new
+api_instance = ConnectWise::BoardExcludedMembersApi.new
 
 id = 56 # Integer | 
 
-excluded_member = Connectwise::ExcludedMember.new # ExcludedMember | 
+board_excluded_member = ConnectWise::BoardExcludedMember.new # BoardExcludedMember | 
 
 
 begin
-  result = api_instance.service_boards_id_excluded_members_post(id, excluded_member)
+  result = api_instance.service_boards_id_excluded_members_post(id, board_excluded_member)
   p result
-rescue Connectwise::ApiError => e
+rescue ConnectWise::ApiError => e
   puts "Exception when calling BoardExcludedMembersApi->service_boards_id_excluded_members_post: #{e}"
 end
 ```
@@ -276,11 +280,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**|  | 
- **excluded_member** | [**ExcludedMember**](ExcludedMember.md)|  | 
+ **board_excluded_member** | [**BoardExcludedMember**](BoardExcludedMember.md)|  | 
 
 ### Return type
 
-[**ExcludedMember**](ExcludedMember.md)
+[**BoardExcludedMember**](BoardExcludedMember.md)
 
 ### Authorization
 

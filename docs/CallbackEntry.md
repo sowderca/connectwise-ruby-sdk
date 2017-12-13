@@ -1,4 +1,4 @@
-# Connectwise::CallbackEntry
+# ConnectWise::CallbackEntry
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | 
 **level** | **String** |  | 
 **member_id** | **Integer** |  | [optional] 
+**inactive_flag** | **BOOLEAN** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

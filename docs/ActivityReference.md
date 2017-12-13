@@ -1,4 +1,4 @@
-# Connectwise::ActivityReference
+# ConnectWise::ActivityReference
 
 ## Properties
 Name | Type | Description | Notes

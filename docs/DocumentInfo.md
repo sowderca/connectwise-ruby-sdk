@@ -1,4 +1,4 @@
-# Connectwise::DocumentInfo
+# ConnectWise::DocumentInfo
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **link_flag** | **BOOLEAN** |  | [optional] 
 **image_flag** | **BOOLEAN** |  | [optional] 
 **public_flag** | **BOOLEAN** |  | [optional] 
+**html_template_flag** | **BOOLEAN** |  | [optional] 
 **read_only_flag** | **BOOLEAN** |  | [optional] 
+**size** | **Integer** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
 
 

@@ -1,4 +1,4 @@
-# Connectwise::ScheduleEntry
+# ConnectWise::ScheduleEntry
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | [optional] 
 **object_id** | **Integer** |  | [optional] 
 **name** | **String** |  | [optional] 
-**member** | [**MemberReference**](MemberReference.md) |  | [optional] 
+**member** | [**MemberReference**](MemberReference.md) | Activity schedule requires a member | [optional] 
 **where** | [**ServiceLocationReference**](ServiceLocationReference.md) |  | [optional] 
 **date_start** | **DateTime** |  | [optional] 
 **date_end** | **DateTime** |  | [optional] 
@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **allow_schedule_conflicts_flag** | **BOOLEAN** |  | [optional] 
 **add_member_to_project_flag** | **BOOLEAN** |  | [optional] 
 **project_role_id** | **Integer** |  | [optional] 
+**mobile_guid** | [**Guid**](Guid.md) |  | [optional] 
 **close_date** | **DateTime** |  | [optional] 
 **hours** | **Float** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 

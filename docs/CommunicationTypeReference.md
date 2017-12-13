@@ -1,4 +1,4 @@
-# Connectwise::CommunicationTypeReference
+# ConnectWise::CommunicationTypeReference
 
 ## Properties
 Name | Type | Description | Notes

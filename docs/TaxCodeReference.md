@@ -1,4 +1,4 @@
-# Connectwise::TaxCodeReference
+# ConnectWise::TaxCodeReference
 
 ## Properties
 Name | Type | Description | Notes

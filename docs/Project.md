@@ -1,13 +1,13 @@
-# Connectwise::Project
+# ConnectWise::Project
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
 **_info** | [**Metadata**](Metadata.md) | Metadata of the entity | [optional] 
-**actual_end** | **String** |  | [optional] 
+**actual_end** | **DateTime** |  | [optional] 
 **actual_hours** | **Float** |  | [optional] 
-**actual_start** | **String** |  | [optional] 
+**actual_start** | **DateTime** |  | [optional] 
 **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] 
 **bill_expenses** | **String** |  | [optional] 
 **billing_amount** | **Float** |  | [optional] 
@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
 **customer_po** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] 
 **downpayment** | **Float** |  | [optional] 
 **estimated_end** | **DateTime** |  | 
 **estimated_expense_revenue** | **Float** |  | [optional] 
@@ -47,9 +48,9 @@ Name | Type | Description | Notes
 **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] 
 **project_template_id** | **Integer** |  | [optional] 
 **restrict_down_payment_flag** | **BOOLEAN** |  | [optional] 
-**scheduled_end** | **String** |  | [optional] 
+**scheduled_end** | **DateTime** |  | [optional] 
 **scheduled_hours** | **Float** |  | [optional] 
-**scheduled_start** | **String** |  | [optional] 
+**scheduled_start** | **DateTime** |  | [optional] 
 **ship_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] 
 **ship_to_contact** | [**ContactReference**](ContactReference.md) |  | [optional] 
 **ship_to_site** | [**SiteReference**](SiteReference.md) |  | [optional] 
@@ -57,5 +58,11 @@ Name | Type | Description | Notes
 **status** | [**ProjectStatusReference**](ProjectStatusReference.md) |  | [optional] 
 **time_approver** | [**MemberReference**](MemberReference.md) |  | [optional] 
 **type** | [**ProjectTypeReference**](ProjectTypeReference.md) |  | [optional] 
+**do_not_display_in_portal_flag** | **BOOLEAN** |  | [optional] 
+**billing_start_date** | **DateTime** |  | [optional] 
+**estimated_time_cost** | **Float** |  | [optional] 
+**estimated_expense_cost** | **Float** |  | [optional] 
+**estimated_product_cost** | **Float** |  | [optional] 
+**tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] 
 
 

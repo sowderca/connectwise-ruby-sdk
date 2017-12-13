@@ -1,4 +1,4 @@
-# Connectwise::CatalogComponent
+# ConnectWise::CatalogComponent
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **hide_item_identifier_flag** | **BOOLEAN** |  | [optional] 
 **hide_description_flag** | **BOOLEAN** |  | [optional] 
 **hide_quantity_flag** | **BOOLEAN** |  | [optional] 
+**hide_extended_price_flag** | **BOOLEAN** |  | [optional] 
 **parent_catalog_item** | [**CatalogItemReference**](CatalogItemReference.md) |  | [optional] 
 **price** | **Float** |  | [optional] 
 **cost** | **Float** |  | [optional] 

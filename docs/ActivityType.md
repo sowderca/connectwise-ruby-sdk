@@ -1,4 +1,4 @@
-# Connectwise::ActivityType
+# ConnectWise::ActivityType
 
 ## Properties
 Name | Type | Description | Notes

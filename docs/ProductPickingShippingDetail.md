@@ -1,4 +1,4 @@
-# Connectwise::ProductPickingShippingDetail
+# ConnectWise::ProductPickingShippingDetail
 
 ## Properties
 Name | Type | Description | Notes

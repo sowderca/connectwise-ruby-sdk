@@ -1,4 +1,4 @@
-# Connectwise::AgreementTypeReference
+# ConnectWise::AgreementTypeReference
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Connectwise::UserDefinedField
+# ConnectWise::UserDefinedField
 
 ## Properties
 Name | Type | Description | Notes

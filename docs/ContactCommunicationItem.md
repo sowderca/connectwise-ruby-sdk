@@ -1,4 +1,4 @@
-# Connectwise::ContactCommunicationItem
+# ConnectWise::ContactCommunicationItem
 
 ## Properties
 Name | Type | Description | Notes

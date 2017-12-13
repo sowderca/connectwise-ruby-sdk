@@ -1,4 +1,4 @@
-# Connectwise::EntityTypeReference
+# ConnectWise::EntityTypeReference
 
 ## Properties
 Name | Type | Description | Notes
