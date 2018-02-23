@@ -2,7 +2,7 @@
 
 ConnectWise - the Ruby gem for the ConnectWise API
 
-ConnectWise Time API
+ConnectWise API
 
 - API version: 3.0.0
 - Package version: 2.0.0
@@ -32,9 +32,9 @@ Finally add this to the Gemfile:
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/GIT_USER_ID/GIT_REPO_ID, then add the following in the Gemfile:
+If the Ruby gem is hosted at a git repository: https://github.com/sowderca/connectwise-ruby-sdk, then add the following in the Gemfile:
 
-    gem 'connectwise-ruby-sdk', :git => 'https://github.com/GIT_USER_ID/GIT_REPO_ID.git'
+    gem 'connectwise-ruby-sdk', :git => 'https://github.com/sowderca/connectwise-ruby-sdk.git'
 
 ### Include the Ruby code directly
 
@@ -51,17 +51,18 @@ Please follow the [installation](#installation) procedure and then run the follo
 # Load the gem
 require 'connectwise-ruby-sdk'
 
-# Setup authorization
 ConnectWise.configure do |config|
-  # Configure HTTP basic authorization: BasicAuth
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+  config.username = "#{company_id}+#{public_api_key}"
+  config.password =  "#{private_api_key}"
+  config.host = 'api-na.myconnectwise.net' # your connectwise url
+  config.base_path = '/v4_6_release/apis/3.0' # Or alternative code base release
+  config.scheme = 'https'
 end
 
 api_instance = ConnectWise::AccountingBatchesApi.new
 
 opts = {
-  conditions: "conditions_example" # String |
+  conditions: "conditions_example" # String
 }
 
 begin
