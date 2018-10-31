@@ -179,6 +179,18 @@ RSpec.describe ConnectWise::ApiClient do
       expect(api_client.select_header_accept(['application/xml'])).to eq('application/xml')
       expect(api_client.select_header_accept(['text/html', 'application/xml'])).to eq('text/html,application/xml')
     end
+
+    context 'with default json accept header' do
+      let(:default_accept_header) { 'application/vnd.connectwise.com+json; version=3.0.0' }
+
+      before do
+        api_client.default_headers['Accept'] = default_accept_header
+      end
+
+      it 'uses the default json header before a generic one' do
+        expect(api_client.select_header_accept(['application/json'])).to eq(default_accept_header)
+      end
+    end
   end
 
   describe "#select_header_content_type" do
