@@ -1,7 +1,6 @@
-
 require 'spec_helper'
 
-describe ConnectWise::ApiClient do
+RSpec.describe ConnectWise::ApiClient do
   context 'initialization' do
     context 'URL stuff' do
       context 'host' do
@@ -59,24 +58,24 @@ describe ConnectWise::ApiClient do
     end
   end
 
-  describe "timeout in #build_request" do
-    let(:config) { ConnectWise::Configuration.new }
-    let(:api_client) { ConnectWise::ApiClient.new(config) }
-
-    it "defaults to 0" do
-      expect(ConnectWise::Configuration.default.timeout).to eq(0)
-      expect(config.timeout).to eq(0)
-
-      request = api_client.build_request(:get, '/test')
-      expect(request.options[:timeout]).to eq(0)
-    end
-
-    it "can be customized" do
-      config.timeout = 100
-      request = api_client.build_request(:get, '/test')
-      expect(request.options[:timeout]).to eq(100)
-    end
-  end
+  # describe "timeout in #build_request" do
+  #   let(:config) { ConnectWise::Configuration.new }
+  #   let(:api_client) { ConnectWise::ApiClient.new(config) }
+  #
+  #   it "defaults to 0" do
+  #     expect(ConnectWise::Configuration.default.timeout).to eq(0)
+  #     expect(config.timeout).to eq(0)
+  #
+  #     request = api_client.build_request(:get, '/test')
+  #     expect(request.options[:timeout]).to eq(0)
+  #   end
+  #
+  #   it "can be customized" do
+  #     config.timeout = 100
+  #     request = api_client.build_request(:get, '/test')
+  #     expect(request.options[:timeout]).to eq(100)
+  #   end
+  # end
 
   describe "#deserialize" do
     it "handles Array<Integer>" do
@@ -113,7 +112,7 @@ describe ConnectWise::ApiClient do
       #api_client = ConnectWise::ApiClient.new
       #_model = ConnectWise::ModelName.new
       # update the model attribute below
-      #_model.id = 1 
+      #_model.id = 1
       # update the expected value (hash) below
       #expected = {id: 1, name: '', tags: []}
       #expect(api_client.object_to_hash(_model)).to eq(expected)
