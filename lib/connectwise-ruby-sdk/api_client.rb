@@ -313,7 +313,9 @@ module ConnectWise
     # @param [Array] accepts array for Accept
     # @return [String] the Accept header (e.g. application/json)
     def select_header_accept(accepts)
-      return nil if accepts.nil? || accepts.empty?
+      accepts ||= []
+      accepts.unshift(@default_headers['Accept']) if @default_headers['Accept']
+      return nil if accepts.empty?
       # use JSON when present, otherwise use all of the provided
       json_accept = accepts.find { |s| json_mime?(s) }
       return json_accept || accepts.join(',')
