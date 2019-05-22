@@ -23,7 +23,8 @@ module ConnectWise
       @user_agent = "Swagger-Codegen/#{VERSION}/ruby"
       @default_headers = {
         'Content-Type' => "application/json",
-        'User-Agent' => @user_agent
+        'User-Agent' => @user_agent,
+        'clientId'   => @config.client_id
       }
     end
 
