@@ -20,15 +20,15 @@ gem build connectwise-ruby-sdk.gemspec
 Then either install the gem locally:
 
 ```shell
-gem install ./connectwise-ruby-sdk-2.0.1.gem
+gem install ./connectwise-ruby-sdk-2.0.2.gem
 ```
-(for development, run `gem install --dev ./connectwise-ruby-sdk-2.0.1.gem` to install the development dependencies)
+(for development, run `gem install --dev ./connectwise-ruby-sdk-2.0.2.gem` to install the development dependencies)
 
 or publish the gem to a gem hosting service, e.g. [RubyGems](https://rubygems.org/).
 
 Finally add this to the Gemfile:
 
-    gem 'connectwise-ruby-sdk', '~> 2.0.1'
+    gem 'connectwise-ruby-sdk', '~> 2.0.2'
 
 ### Install from Git
 
