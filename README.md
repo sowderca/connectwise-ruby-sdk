@@ -5,7 +5,7 @@ ConnectWise - the Ruby gem for the ConnectWise API
 ConnectWise API
 
 - API version: 3.0.0
-- Package version: 2.0.1
+- Package version: 2.0.2
 
 ## Installation
 
