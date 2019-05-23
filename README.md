@@ -57,6 +57,7 @@ ConnectWise.configure do |config|
   config.host = 'api-na.myconnectwise.net' # your connectwise url
   config.base_path = '/v4_6_release/apis/3.0' # Or alternative code base release
   config.scheme = 'https'
+  config.client_id = 'XXXX'
 end
 
 api_instance = ConnectWise::AccountingBatchesApi.new
@@ -2523,4 +2524,3 @@ Class | Method | HTTP request | Description
 ### BasicAuth
 
 - **Type**: HTTP basic authentication
-

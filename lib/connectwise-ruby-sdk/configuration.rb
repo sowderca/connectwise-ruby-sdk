@@ -20,6 +20,12 @@ module ConnectWise
     #   config.api_key['api_key'] = 'xxx'
     attr_accessor :api_key
 
+    # Defines the clientId header to send with requests
+    #
+    # @return [String]
+    attr_accessor :client_id
+
+
     # Defines API key prefixes used with API Key authentications.
     #
     # @return [Hash] key: parameter name, value: API key prefix
