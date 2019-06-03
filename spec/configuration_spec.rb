@@ -1,7 +1,7 @@
 
 require 'spec_helper'
 
-describe ConnectWise::Configuration do
+RSpec.describe ConnectWise::Configuration do
   let(:config) { ConnectWise::Configuration.default }
 
   before(:each) do
