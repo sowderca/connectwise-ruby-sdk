@@ -201,7 +201,11 @@ module ConnectWise
       else
         # models, e.g. Pet
         ConnectWise.const_get(return_type).new.tap do |model|
-          model.build_from_hash data
+          begin
+            model.build_from_hash data
+          rescue ArgumentError => ex
+            raise ArgumentError, "#{ex.message} Data: #{data}"
+          end
         end
       end
     end
