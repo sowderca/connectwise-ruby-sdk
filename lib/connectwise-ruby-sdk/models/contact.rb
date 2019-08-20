@@ -574,12 +574,12 @@ module ConnectWise
     # Custom attribute writer method with validation
     # @param [Object] country Value to be assigned
     def country=(country)
-
-      if !country.nil? && country.to_s.length > 50
+      parsed_country = country.is_a?(String) ? country : country.try(:[],:name)
+      if !parsed_country.nil? && parsed_country.to_s.length > 50
         fail ArgumentError, "invalid value for 'country', the character length must be smaller than or equal to 50."
       end
 
-      @country = country
+      @country = parsed_country
     end
 
     # Custom attribute writer method with validation
