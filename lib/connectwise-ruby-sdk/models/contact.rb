@@ -426,7 +426,11 @@ module ConnectWise
       end
 
       if !@country.nil? && @country.to_s.length > 50
-        invalid_properties.push("invalid value for 'country', the character length must be smaller than or equal to 50.")
+        if country.to_s =~ /country_href/
+          # no-op, it's not really invalid
+        else
+          invalid_properties.push("invalid value for 'country', the character length must be smaller than or equal to 50.")
+        end
       end
 
       if !@security_identifier.nil? && @security_identifier.to_s.length > 184
@@ -475,7 +479,7 @@ module ConnectWise
       return false if !@city.nil? && @city.to_s.length > 50
       return false if !@state.nil? && @state.to_s.length > 50
       return false if !@zip.nil? && @zip.to_s.length > 12
-      return false if !@country.nil? && @country.to_s.length > 50
+      return false if !@country.nil? && (@country.to_s.length > 50 && !@country.to_s =~ /country_href/)
       return false if !@security_identifier.nil? && @security_identifier.to_s.length > 184
       return false if !@title.nil? && @title.to_s.length > 100
       return false if !@school.nil? && @school.to_s.length > 50
@@ -574,12 +578,11 @@ module ConnectWise
     # Custom attribute writer method with validation
     # @param [Object] country Value to be assigned
     def country=(country)
-      parsed_country = country.is_a?(String) ? country : country.try(:[],:name)
-      if !parsed_country.nil? && parsed_country.to_s.length > 50
+      if !country.nil? && country.to_s.length > 50
         fail ArgumentError, "invalid value for 'country', the character length must be smaller than or equal to 50."
       end
 
-      @country = parsed_country
+      @country = country
     end
 
     # Custom attribute writer method with validation
