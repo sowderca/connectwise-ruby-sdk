@@ -426,7 +426,7 @@ module ConnectWise
       end
 
       if !@country.nil? && @country.to_s.length > 50
-        if country.to_s =~ /country_href/
+        if (@country.to_s =~ /country_href/).present?
           # no-op, it's not really invalid
         else
           invalid_properties.push("invalid value for 'country', the character length must be smaller than or equal to 50.")
@@ -479,7 +479,9 @@ module ConnectWise
       return false if !@city.nil? && @city.to_s.length > 50
       return false if !@state.nil? && @state.to_s.length > 50
       return false if !@zip.nil? && @zip.to_s.length > 12
-      return false if !@country.nil? && (@country.to_s.length > 50 && !@country.to_s =~ /country_href/)
+      # allowed country values: nil, string <= 50, any object
+      # so valid false if not nil but length > 50 and not an object... nil.to_s.length == 0 though
+      return false if @country.to_s.length > 50 && (@country.to_s =~ /country_href/).nil?
       return false if !@security_identifier.nil? && @security_identifier.to_s.length > 184
       return false if !@title.nil? && @title.to_s.length > 100
       return false if !@school.nil? && @school.to_s.length > 50
