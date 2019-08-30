@@ -551,9 +551,9 @@ module ConnectWise
         invalid_properties.push("invalid value for 'identifier', identifier cannot be nil.")
       end
 
-      if @identifier.to_s.length > 25
-        invalid_properties.push("invalid value for 'identifier': #{@identifier} (length: #{@identifier.to_s.length}), the character length must be smaller than or equal to 25.")
-      end
+      # if @identifier.to_s.length > 25
+      #   invalid_properties.push("invalid value for 'identifier': #{@identifier} (length: #{@identifier.to_s.length}), the character length must be smaller than or equal to 25.")
+      # end
 
       if @name.nil?
         invalid_properties.push("invalid value for 'name', name cannot be nil.")
@@ -654,7 +654,7 @@ module ConnectWise
     # @return true if the model is valid
     def valid?
       return false if @identifier.nil?
-      return false if @identifier.to_s.length > 25
+      # return false if @identifier.to_s.length > 25
       return false if @name.nil?
       return false if @name.to_s.length > 50
       return false if !@address_line1.nil? && @address_line1.to_s.length > 50
