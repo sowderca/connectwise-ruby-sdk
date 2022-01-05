@@ -284,8 +284,8 @@ module ConnectWise
         invalid_properties.push("invalid value for 'description', description cannot be nil.")
       end
 
-      if @description.to_s.length > 50
-        invalid_properties.push("invalid value for 'description', the character length must be smaller than or equal to 50.")
+      if @description.to_s.length > 60
+        invalid_properties.push("invalid value for 'description', the character length must be smaller than or equal to 60.")
       end
 
       if @subcategory.nil?
@@ -325,7 +325,7 @@ module ConnectWise
       return false if @identifier.nil?
       return false if @identifier.to_s.length > 60
       return false if @description.nil?
-      return false if @description.to_s.length > 50
+      return false if @description.to_s.length > 60
       return false if @subcategory.nil?
       return false if @type.nil?
       product_class_validator = EnumAttributeValidator.new('String', ["Agreement", "Bundle", "Inventory", "NonInventory", "Service"])
@@ -361,8 +361,8 @@ module ConnectWise
         fail ArgumentError, "description cannot be nil"
       end
 
-      if description.to_s.length > 50
-        fail ArgumentError, "invalid value for 'description', the character length must be smaller than or equal to 50."
+      if description.to_s.length > 60
+        fail ArgumentError, "invalid value for 'description', the character length must be smaller than or equal to 60."
       end
 
       @description = description
